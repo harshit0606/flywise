@@ -17,7 +17,7 @@ import Footer from "./common/footer";
 import Navbar from "./common/navbar";
 import faqs from "./../content/homeFaqs";
 import { useEffect } from "react";
-
+import TestimonialCard from "../component/testimonialCard";
 import classes from "../styles/whatsappbtn.module.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -554,6 +554,8 @@ export default function Home() {
           colSpan={12}
           px={["2", "1", "4", "8", "16"]}
           // colSpan={{base: 12, md:6}}
+      
+            
           mt="16"
           bg={
             "linear-gradient(180deg, #E6F6FF 41.47%, rgba(255, 255, 255, 0) 100%)"
@@ -622,85 +624,51 @@ export default function Home() {
         </GridItem>
 
         {[
-          {
-            name: "Shubbham singh",
-            uni: "University of South Florida",
-            avatar: "Akhil.daggubati.jpg",
-            text: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. A fusce lacus non in tortor, libero do”“Lorem ipsum dolor sit amet, consectetur adipiscing elit. A fusce lacus non in tortor, libero do”",
-            img: "/images/mentors/floridaa.jpg",
-          },
-          {
-            name: "Preethi Rama",
-            uni: "Cleveland State University",
-            avatar: "Preethi.rama.jpeg",
-            text: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. A fusce lacus non in tortor, libero do”“Lorem ipsum dolor sit amet, consectetur adipiscing elit. A fusce lacus non in tortor, libero do”",
-            img: "/images/mentors/cleveland.jpg",
-          },
+          
+{
+  name: "Akhil Daggubati",
+  uni: "University of South Florida",
+logo: "/images/icons/floridalogo.png",
+  img: "/images/mentors/Akhil.png",
+  text: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. A fusce lacus non in tortor, libero do”“Lorem ipsum dolor sit amet, consectetur adipiscing elit. A fusce lacus non in tortor, libero do”",
+
+degree:"Business analytics "
+},
+{
+  name: "Preethi Rama",
+  uni: "Cleveland State University",
+  img: "/images/mentors/Preethi.png",
+  text: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. A fusce lacus non in tortor, libero do”“Lorem ipsum dolor sit amet, consectetur adipiscing elit. A fusce lacus non in tortor, libero do”",
+  logo:"/images/icons/clevelandlogo.png",
+degree:"Information systems"
+},
         ].map((testimonial, idx) => (
           <GridItem
-            marginLeft="auto"
-            marginRight="auto"
-            width="400px"
-            bg="white"
-            // boxShadow="base"
-            // _hover={{ boxShadow: 'lg' }}
-            transition="all 0.2s"
-            // rounded="md"
-            pb="16"
-            px="8"
-            // px="2"
-            key={idx}
-            colSpan={["12", "6", "6", "6", "6"]}
-            rowSpan={"12"}
+          marginLeft="auto"
+          marginRight="auto"
+          width={{base:"360px",md:"430px"}}
+          bg="white"
+    
+          // boxShadow="base"
+          // _hover={{ boxShadow: 'lg' }}
+          transition="all 0.2s"
+          // rounded="md"
+          pb="8"
+          
+          // px="2"
+          key={idx}
+          colSpan={["12", "6", "6", "6", "6"]}
+          rowSpan={"12"}
           >
-            {/* <Flex mt="8"> */}
-            <Flex justifyContent="flex-end">
-              <Image
-                // transform="translate(2rem, -0.8rem)"
-                alt="avatar"
-                // maxW="80%"
-                height="500px"
-                width="325.8px"
-                objectFit="cover"
-                src={`/images/mentors/${testimonial.avatar}`}
-              />
-            </Flex>
-            <Flex pr="2" justifyContent="flex-end">
-              <Box
-                rounded="lg"
-                width="160px"
-                // pb="3"
-                transform={[
-                  "translate(0rem, -4.8rem)",
-                  "translate(0rem, -3.8rem)",
-                  "translate(0rem, -4.7rem)",
-                  "translate(0rem, -3.9rem)",
-                  "translate(0rem, -4.8rem)",
-                ]}
-                height="65px"
-                overflow="hidden"
-              >
-                <Image
-                  objectFit="contain"
-                  borderRadius="10px"
-                  height="60px"
-                  width="160px"
-                  src={testimonial.img}
-                  alt="nyu"
-                />
-              </Box>
-            </Flex>
-            {/* </Flex> */}
-            <Text mt="-7">{testimonial.text}</Text>
-            <Text fontWeight="bold" fontSize="18px" mt="3">
-              {testimonial.name}
-            </Text>
-            <Text fontWeight="bold" fontSize="12px">
-              Degree
-            </Text>
-            <Text fontWeight="bold" fontSize="12px">
-              {testimonial.uni}
-            </Text>
+            <TestimonialCard
+            name={testimonial.name}
+            degree={testimonial.degree}
+            img={testimonial.img}
+            logo={testimonial.logo}
+            text={testimonial.text}
+            uni={testimonial.uni}
+            />
+
           </GridItem>
         ))}
         <GridItem
