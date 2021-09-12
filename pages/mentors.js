@@ -112,12 +112,13 @@ function Mentors() {
 					// pr={[ '0.4rem', '1rem', '1rem', '2rem', '3rem' ]}
 					rowSpan={12}
 					colSpan={12}
-					bg={'url(/images/mentors/mentors-image.jpeg)  no-repeat center center'}
-					backgroundSize="cover"
+					bg={
+						"linear-gradient(180deg, #E6F6FF 41.47%, rgba(255, 255, 255, 0) 100%)"
+					  }
 				>
 					{/* {console.log(w.env.PUBLIC_URL)} */}
 					<Heading
-						color="white"
+						color="black"
 						textAlign="center"
 						pt={[ '8', '8', '8', '12', '16' ]}
 						pb={[ '2', '2', '4', '8', '8' ]}
@@ -132,8 +133,8 @@ function Mentors() {
 						px={[ '4', '8', '16', '16', '32' ]}
 						mx={[ '4', '8', '16', '16', '32' ]}
 						fontSize={[ 'md', 'lg', 'xl', 'xl', '2xl' ]}
-						py={[ '8', '8', '8', '12', '12' ]}
-						color="white"
+						py={[ '8', '8', '8', '8', '8' ]}
+						color="gray.500"
 						
 						fontWeight="400"
 					>
