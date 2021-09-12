@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useRef } from "react";
 import FaqList from "../common/faqs";
-import Footer from "../common/footer";
+import Footer from "../common/footerr";
 import Navbar from "../common/navbar";
 import faqs from "../../content/australiaFaqs";
 
@@ -281,8 +281,9 @@ function Australia() {
           </Heading>
           <FaqList faqs={faqs} />
         </GridItem>
-        <Footer />
+        
       </Grid>
+      <Footer />
     </Box>
   );
 }
