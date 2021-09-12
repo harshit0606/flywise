@@ -465,7 +465,7 @@ export default function Home() {
                 px={["2", "1", "2", "3", "4"]}
                 py={["2", "4", "8", "16", "16"]}
               >
-                Admit from right top University
+                Admit from right University
               </Heading>
             </Box>
           </Flex>
