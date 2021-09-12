@@ -6,7 +6,7 @@ import {
 } from "../content/firebase";
 import React from "react";
 import { useRouter } from "next/router";
-import Footer from "./common/footer";
+import Footer from "./common/footerr";
 import Image from "next/image";
 import Navbar from "./common/navbar";
 import NLink from "next/link";
@@ -144,8 +144,9 @@ const router=useRouter();
             </div>
           </GridItem>
 
-          <Footer />
+          
         </Grid>
+        <Footer />
       </Box>
     </div>
   );

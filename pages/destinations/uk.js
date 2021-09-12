@@ -17,7 +17,7 @@ import {
 import React, { useRef } from "react";
 import FaqList from "../common/faqs";
 import Faq from "../common/faqs";
-import Footer from "../common/footer";
+import Footer from "../common/footerr";
 import Navbar from "../common/navbar";
 import faqs from "../../content/ukFaqs";
 
@@ -283,8 +283,9 @@ function UK() {
           </Heading>
           <FaqList faqs={faqs} />
         </GridItem>
-        <Footer />
+        
       </Grid>
+      <Footer />
     </Box>
   );
 }

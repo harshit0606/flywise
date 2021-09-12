@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "./common/footer";
+import Footer from "./common/footerr";
 import Image from "next/image";
 import Navbar from "./common/navbar";
 import NLink from 'next/link';
@@ -63,8 +63,9 @@ function courses() {
           </div>
         </GridItem>
 
-        <Footer />
+        
       </Grid>
+      <Footer />
     </Box>
     )
 }

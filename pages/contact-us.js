@@ -1,6 +1,6 @@
 import { Box, Button, Center, Grid, GridItem, Heading, Image, Input, Link, Text, Textarea } from '@chakra-ui/react';
 import React from 'react';
-import Footer from './common/footer';
+import Footer from './common/footerr';
 import Navbar from './common/navbar';
 
 function ContactUS() {
@@ -131,8 +131,9 @@ function ContactUS() {
 						</Button>
 					</Center>
 				</GridItem>
-				<Footer />
+				
 			</Grid>
+			<Footer />
 		</Box>
 	);
 }
