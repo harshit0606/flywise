@@ -4,7 +4,7 @@
 	width: 100px;
 	right: 0px;
 	background: transparent;
-	z-index: 50;
+	z-index: 2;
 	bottom: 10px;
 }
 .what img{
@@ -109,6 +109,7 @@
 	.what{
 		height:80px;
 		width:80px;
+		bottom: 0;
 
 	}
 	.pnggg{

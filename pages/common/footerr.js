@@ -53,7 +53,13 @@ function footerr() {
             <Image src={Clubhouse} className={classes.icons} />
           </div>
           </Link>
-          <div className={classes.arrowdiv} id="scrollToTopBtn">
+          <div className={classes.arrowdiv} id="scrollToTopBtn" onClick={() => {
+            window.scroll({
+              top: 0,
+              left: 0,
+              behavior: 'smooth'
+            })
+          }}>
           <Image src={Arrow} className={classes.arrow} height="20px" width="15px" />
           </div>
         </div>

@@ -59,7 +59,7 @@ export default function Home() {
 					</Heading> */}
 
           <Heading
-            mt="4"
+            mt={{base:"8",md:"4"}}
             textAlign={{ base: "center", md: "left" }}
             fontSize={["2xl", "2xl", "3xl", "3xl", "4xl"]}
           >
@@ -90,7 +90,7 @@ export default function Home() {
           <Text
             textAlign={{ base: "center", md: "left" }}
             my="4"
-            fontSize={{ base: "14px", md: "16px" }}
+            fontSize={{ base: "16px", md: "16px" }}
           >
             Why do we go abroad? To study more, land on a good job, earn enough,
             and settle for a good life. Right? Most of us dream of achieving
@@ -100,12 +100,12 @@ export default function Home() {
           <Text
             textAlign={{ base: "center", md: "left" }}
             my="4"
-            fontSize={{ base: "14px", md: "16px" }}
+            fontSize={{ base: "16px", md: "16px" }}
           >
             We, at Flywise, want to make that journey as smooth as possible till
             you settle yourself well.
           </Text>
-          <Flex justifyContent={{ base: "center", md: "flex-start" }}>
+          <Flex my={{base:"10", md:"5"}} justifyContent={{ base: "center", md: "flex-start" }}>
             <NLink href="/profile-evaluation" passHref>
               <Button
                 variant={"solid"}
@@ -113,6 +113,7 @@ export default function Home() {
                 color="white"
                 fontWeight="semibold"
                 px="6"
+                my={{base:"4", md:"2"}}
                 id="gradientt"
                 colorScheme="blue"
                 // bg="linear-gradient(289.85deg, #6ADBDB 20.37%, #4080D3 73.15%)"
@@ -139,7 +140,7 @@ export default function Home() {
           colSpan={[12, 12, 5, 5, 5]}
           bg={bg}
         >
-          <Image mt="16" src="/images/landing_1.svg" alt="main" />
+          <Image mt="16" src="/images/land (2).svg" alt="main" />
         </GridItem>
         <GridItem
           px={["0.4rem", "1rem", "3rem", "6rem", "10rem"]}
