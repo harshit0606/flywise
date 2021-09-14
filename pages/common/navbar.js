@@ -224,7 +224,7 @@ function Header() {
         <div id="closeham" className={classes.ham} onClick={hidee}>
           <Image src="/images/icons/ham.png" />
         </div>
-        <div className={classes.firstsidelink}>
+        <div className={classes.firstsidelink} onClick={hidee}>
           <NextLink passHref href={"/testprep"}>
             <p>Test Prep</p>
           </NextLink>
@@ -236,7 +236,7 @@ function Header() {
             width="25px"
           />
         </div>
-        <div className={classes.sidelink}>
+        <div className={classes.sidelink} onClick={hidee}>
           <NextLink passHref href={"/profile-evaluation"}>
             <p>Profile Evaluation</p>
           </NextLink>
@@ -248,7 +248,7 @@ function Header() {
             width="25px"
           />
         </div>
-        <div className={classes.sidelink}>
+        <div className={classes.sidelink} onClick={hidee}>
           <NextLink passHref href={"/#services"}>
             <p>Services</p>
           </NextLink>
@@ -260,7 +260,7 @@ function Header() {
             width="25px"
           />
         </div>
-        <div className={classes.sidelink}>
+        <div className={classes.sidelink} onClick={hidee}>
           <NextLink passHref href={"/mentors"}>
             <p>Mentors</p>
           </NextLink>
@@ -272,7 +272,7 @@ function Header() {
             width="25px"
           />
         </div>
-        <div id="destinaiton" className={classes.sidelink}>
+        <div id="destinaiton" className={classes.sidelink} >
           <Popover
             placement="bottom"            
             closeOnBlur={true}
@@ -332,8 +332,8 @@ function Header() {
             width="25px"
           />
         </div>
-        <div className={classes.sidelink}>
-          <NextLink passHref href={"/courses"}>
+        <div className={classes.sidelink} onClick={hidee}>
+          <NextLink passHref href={"/courses"} >
             <p>Courses</p>
           </NextLink>
           <Image
@@ -345,7 +345,7 @@ function Header() {
           />
         </div>
         <div className={classes.sidelink}>
-          <NextLink passHref href={"/contact-us"}>
+          <NextLink passHref href={"/contact-us"} onClick={hidee}>
             <p>Contact Us</p>
           </NextLink>
           <Image
