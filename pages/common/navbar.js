@@ -157,7 +157,7 @@ const AllNavLinks = ({ outline }) => {
   );
 };
 
-function header() {
+function Header() {
   const [show, setShow] = useState(false);
   useEffect(() => {
     console.log(show);
@@ -361,4 +361,4 @@ function header() {
   );
 }
 
-export default header;
+export default Header;
