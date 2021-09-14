@@ -137,6 +137,7 @@ export default function Home() {
         <GridItem
           pr={["0.4rem", "1rem", "3rem", "6rem", "12rem"]}
           rowSpan={12}
+          my={{base:"10px",md:"30px"}}
           colSpan={[12, 12, 5, 5, 5]}
           bg={bg}
         >
@@ -631,7 +632,7 @@ export default function Home() {
   uni: "University of South Florida",
 logo: "/images/icons/floridalogo.png",
   img: "/images/mentors/Akhil.png",
-  text: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. A fusce lacus non in tortor, libero do”“Lorem ipsum dolor sit amet, consectetur adipiscing elit. A fusce lacus non in tortor, libero do”",
+  text: "“I reached out to Pavan (founder) on Linkedin before Flywise was incorporated, in that call he understood my backgroud, aspirations and suggested the best course taking all factors into consideration, that call cleared my questions and gave me a concrete understanding of the pros and cons of the course that was being suggested by Pavan. I've joined Flywise and definitely feel it's beneficial to stay up to date on the latest course offerings,  industry trends and tips to maximize my chances of getting my dream job!”",
 
 degree:"Business analytics "
 },
@@ -639,7 +640,7 @@ degree:"Business analytics "
   name: "Preethi Rama",
   uni: "Cleveland State University",
   img: "/images/mentors/Preethi.png",
-  text: "“Lorem ipsum dolor sit amet, consectetur adipiscing elit. A fusce lacus non in tortor, libero do”“Lorem ipsum dolor sit amet, consectetur adipiscing elit. A fusce lacus non in tortor, libero do”",
+  text: "“I reached out to Pavan (founder) on Linkedin before Flywise was incorporated, in that call he understood my backgroud, aspirations and suggested the best course taking all factors into consideration, that call cleared my questions and gave me a concrete understanding of the pros and cons of the course that was being suggested by Pavan. I've joined Flywise and definitely feel it's beneficial to stay up to date on the latest course offerings,  industry trends and tips to maximize my chances of getting my dream job!”",
   logo:"/images/icons/clevelandlogo.png",
 degree:"Information systems"
 },
@@ -647,7 +648,7 @@ degree:"Information systems"
           <GridItem
           marginLeft="auto"
           marginRight="auto"
-          width={{base:"360px",md:"430px"}}
+          
           bg="white"
     
           // boxShadow="base"
@@ -658,7 +659,7 @@ degree:"Information systems"
           
           // px="2"
           key={idx}
-          colSpan={["12", "6", "6", "6", "6"]}
+          colSpan={["12", "12", "12", "12", "6"]}
           rowSpan={"12"}
           >
             <TestimonialCard

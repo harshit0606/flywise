@@ -43,18 +43,20 @@
 
 }
 .test{
-	height:650px;
-	width:430px;
+	height:100%;
+
+	width:100%;
 	background-color:   #F6F7F8;
-	padding:40px 50px;
+	padding:30px 30px;
 	border-radius: 10px;
+	display: flex;
 	
 }
 .images{
 	position: relative;
 	height:350px;
 	width:330px;
-	margin-bottom: 20px;
+	
 }
 
 .logo{
@@ -67,7 +69,11 @@
 }
 .text{
 	font-size: 14px;
-
+	text-align: justify;
+}
+.data{
+	width:300px;
+	margin-left: 20px;
 }
 .test h2{
 	font-size: 20px;
@@ -97,6 +103,12 @@
 		bottom: 0;
 
 	}
+	.test{
+		flex-direction: column;
+	}
+	.data{
+		margin-left: 0;
+	}
 	.pnggg{
 		width: 340px;
 	}
@@ -106,7 +118,7 @@
 }
 @media(max-width: 450px){
 	.test{
-		height:600px;
+		
 		width:360px;
 		
 		padding:30px 30px;
@@ -146,5 +158,8 @@
 		font-size: 14px;
 		font-weight: 600;
 		margin-top: 5px;
+	}
+	.test{
+		flex-direction: column;
 	}
 }
