@@ -344,8 +344,8 @@ function Header() {
             width="25px"
           />
         </div>
-        <div className={classes.sidelink}>
-          <NextLink passHref href={"/contact-us"} onClick={hidee}>
+        <div className={classes.sidelink} onClick={hidee}>
+          <NextLink passHref href={"/contact-us"} >
             <p>Contact Us</p>
           </NextLink>
           <Image
