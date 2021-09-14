@@ -11,23 +11,23 @@ function ContactUS() {
 			<Grid overflow="hidden" maxW="100vw" templateRows="repeat(12, 1fr)" templateColumns="repeat(12, 1fr)">
 				<GridItem
 					zIndex="1"
-					py={[ '0.4rem', '1rem', '2rem', '3rem', '4rem' ]}
-					pl={[ '0.4rem', '1rem', '3rem', '6rem', '12rem' ]}
+					py={[ '2rem', '1rem', '2rem', '3rem', '10rem' ]}
+					pl={[ '0.4rem', '1rem', '3rem', '6rem', '3rem' ]}
 					pr={[ '0.4rem', '1rem', '1rem', '2rem', '3rem' ]}
 					rowSpan={12}
-					colSpan={[ 12, 12, 7, 7, 7 ]}
+					colSpan={[ 12, 12, 6, 6, 6 ]}
 					// bg={bg}
 				>
-					<Heading color="rgba(156, 156, 156, 1)" fontSize={[ 'lg', 'xl', '2xl', '3xl', '4xl' ]}>
+					<Heading color="rgba(156, 156, 156, 1)" my="4" textAlign={{base:"center",sm:"left"}} fontSize={[ 'lg', 'xl', '2xl', '3xl', '4xl' ]}>
 						CONTACT US
 					</Heading>
-					<Heading my="4" fontSize={[ 'xl', '2xl', '3xl', '4xl', '5xl' ]} color="#0DB3FB">
+					<Heading my="8" textAlign={{base:"center",sm:"left"}} fontSize={[ 'xl', '2xl', '3xl', '4xl', '5xl' ]} color="#0DB3FB">
 						{`We've got answers if you've got questions!`}
 					</Heading>
-					<Heading fontWeight="500" my="8" fontSize={[ 'md', 'lg', 'xl', '2xl', '3xl' ]}>
+					<Heading  textAlign={{base:"center",sm:"left"}} fontWeight="500" my="8" fontSize={[ 'md', 'lg', 'xl', '2xl', '3xl' ]}>
 						{`Send us your thoughts, questions, compliments, or resume-related haikus! We'd love to hear from you`}
 					</Heading>
-					<Link>
+{/*<Link>
 						<Button
 							variant={'solid'}
 							size={'lg'}
@@ -53,34 +53,36 @@ function ContactUS() {
 								Contact Us
 							</Heading>
 						</Button>
-					</Link>
+						</Link>*/}
 				</GridItem>
-				<GridItem
+				{/*<GridItem
 					zIndex="1"
 					pr={[ '0.4rem', '1rem', '3rem', '6rem', '12rem' ]}
 					rowSpan={12}
 					colSpan={[ 12, 12, 5, 5, 5 ]}
 				>
 					<Image mt="16" src="/images/contact_us.png" alt="main" />
-				</GridItem>
+				</GridItem>*/}
 				<GridItem
 					// pr={[ '0.4rem', '1rem', '3rem', '6rem', '8rem' ]}
 					rowSpan={12}
-					colSpan={12}
+					marginTop={{base:"20px",sm:"0"}}
+					colSpan={[ 12, 12, 6, 6, 6 ]}
 					bg="linear-gradient(180deg, rgba(230, 246, 255, 0.6) 41.47%, rgba(255, 255, 255, 0) 100%)"
-					pt="32"
+					py={[ '1rem', '1rem', '2rem', '3rem', '10rem' ]}
+					px="10"
 					zIndex="0"
 					transform="translate(0,-3rem)"
-					pb="8"
+					
 				>
 					<Heading textAlign="center" color="rgba(156, 156, 156, 1)" fontSize="xl">
 						Want more information?
 					</Heading>
-					<Heading pr={{ base: '1rem', md: '2rem' }} my="8" textAlign="center">
+					<Heading fontSize={{base:"22px",sm:"40px"}}  my={{base:"4",sm:"8"}} textAlign="center">
 						Ask us your questions or schedule a meeting
 					</Heading>
 					<Center>
-						<Box w={[ '15rem', '22rem', '36rem', '44rem', '50rem' ]}>
+						<Box w={[ '18rem', '22rem', '36rem', '44rem', '50rem' ]}>
 							<Text mt="8" mb="2">
 								Your name
 							</Text>
@@ -100,6 +102,16 @@ function ContactUS() {
 								_hover={{ borderColor: 'blackAlpha.800' }}
 								focusBorderColor="black"
 								placeholder="someone@email.com"
+							/>
+							<Text mt="8" mb="2">
+								Your Number
+							</Text>
+							<Input
+								bg="whiteAlpha.900"
+								borderColor="blackAlpha.500"
+								_hover={{ borderColor: 'blackAlpha.800' }}
+								focusBorderColor="black"
+								placeholder="Your number"
 							/>
 							<Text mt="8" mb="2">
 								Your message
