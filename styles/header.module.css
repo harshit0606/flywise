@@ -44,8 +44,7 @@
     width: 69%;
     background-color: #E6F6FF;
     position:fixed;
-    overflow-y: hidden;
-    top:0;
+    top:0px;
     right: 0px;
     z-index: 2;
     display:none;
@@ -54,10 +53,9 @@
 }
 .sidedrawer.show{
   background-color:  #E6F6FF;
-    right:0;
+   
   display: block;
-
-  position: absolute;
+  
   z-index: 3;
 
 }
