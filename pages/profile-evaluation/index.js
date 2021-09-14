@@ -53,7 +53,7 @@ function One() {
   const onSignInSubmit = () => {
   
     configureRecaptcha();
-    const phoneNumber ="+91"+ userPhone;
+    const phoneNumber = userPhone;
     console.log(phoneNumber);
     const appVerifier = window.recaptchaVerifier;
     signInWithPhoneNumber(auth, phoneNumber, appVerifier)
@@ -85,11 +85,11 @@ function One() {
   const [pe, setPe] = useState(1);
   const [greTraining, setGreTraining] = useState("yes");
   const [session, setSession] = useState("Spring 2022");
-  const [greQuant, setGreQuant] = useState(0);
-  const [greVerbal, setGreVerbal] = useState(0);
-  const [ieltsToefl, setIeltsToefl] = useState(0);
+  const [greQuant, setGreQuant] = useState();
+  const [greVerbal, setGreVerbal] = useState();
+  const [ieltsToefl, setIeltsToefl] = useState();
   const [workEx, setWorkEx] = useState("less than 2 years");
-  const [cgpa, setCgpa] = useState(0);
+  const [cgpa, setCgpa] = useState();
   const [backlogs, setBacklogs] = useState("");
   const [clgUni, setClgUni] = useState("");
   const [budget, setBudget] = useState("Under 20 Lakhs");
@@ -660,7 +660,7 @@ function One() {
                         Previous
                       </Button>
                       <Button
-                        isDisabled={!greQuant || !greVerbal || !ieltsToefl}
+                       
                         color="white"
                         px="8"
                         mb="4"
@@ -848,7 +848,7 @@ function One() {
                     value={cgpa}
                     onChange={(e) => setCgpa(e)}
                     step={0.1}
-                    defaultValue={0}
+                    
                     min={5}
                     max={10}
                     // py="6"
@@ -1239,12 +1239,12 @@ function One() {
               <React.Fragment>
                 {" "}
                 <GridItem
-                  p={["0.4rem", "1rem", "2rem", "3rem", "4rem"]}
+                  p={["0.4rem", "1rem", "2rem", "3rem", "3rem"]}
                   rowSpan={12}
                   colSpan={15}
                   // bg={bg}
                 >
-                  <VStack pt="8" spacing={8}>
+                  <VStack pt="4" spacing={8}>
                     <Input
                       // ml={{ base: '4', md: '4' }}
                       value={username}
@@ -1284,7 +1284,7 @@ function One() {
                       focusBorderColor="#25BAFB"
                       bg="rgba(240, 240, 240, 1)"
                       maxW="20em"
-                      placeholder="Enter number"
+                      placeholder="Number with country code"
                     />
                     <Checkbox
                       onChange={() => setTnC(!tnC)}
@@ -1321,7 +1321,7 @@ function One() {
                           !username ||
                           success
                         }
-                        mt="4"
+                        mt="0"
                         color="white"
                         px="8"
                         mb="4"
