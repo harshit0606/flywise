@@ -82,21 +82,6 @@
 	margin-top: 5px;
 }
 
-.linkdk1{
-	opacity: 1 !important;
-	animation: gayab 2s ease;
-	
-}
-.linkks2{
-	opacity: 1!important;
-	animation-delay: 1s;
-	animation:gayab 2s ease;
-}
-.linksk3{
-	opacity: 1!important;
-	animation-delay: 2s;
-	animation:gayab 2s ease;
-}
 @keyframes gayab{
 	0%{
 		opacity: 0;
