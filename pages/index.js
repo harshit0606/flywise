@@ -605,7 +605,7 @@ export default function Home() {
                   maxW={{ base: "90%", md: "70%" }}
                   textAlign={{ base: "center", md: "left" }}
                   my="12"
-                  mx="2"
+                  mx="0"
                   fontWeight="400"
                 >
                   Our founders and mentors have personally faced/seen all these
