@@ -61,16 +61,16 @@ export default function Home() {
           <Heading
             mt={{base:"8",md:"4"}}
             textAlign={{ base: "center", md: "left" }}
-            fontSize={["2xl", "2xl", "3xl", "3xl", "4xl"]}
+            fontSize={["2xl", "2xl", "3xl", "3xl", "3xl"]}
           >
             India’s best overseas education platform
             <Link
               _hover={{ textDecoration: "none" }}
               fontWeight="bold"
-              fontSize={["2xl", "2xl", "3xl", "3xl", "4xl"]}
+              fontSize={["2xl", "2xl", "3xl", "3xl", "3xl"]}
               color="#0DB3FB"
             >
-              <span className={classes.linkk1} data-aos-duration="1000" data-aos="fade-up">
+              <span className={classes.linkk1} data-aos-once="true" data-aos-duration="1000" data-aos="fade-up">
                 {" "}
                 that
               </span>{" "}
