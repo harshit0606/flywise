@@ -1253,7 +1253,7 @@ function One() {
               <React.Fragment>
                 {" "}
                 <GridItem
-                  p={["0.4rem", "1rem", "2rem", "3rem", "3rem"]}
+                  p={["1rem", "1rem", "2rem", "3rem", "3rem"]}
                   rowSpan={12}
                   colSpan={15}
                   // bg={bg}
@@ -1267,7 +1267,7 @@ function One() {
                       py="3"
                       focusBorderColor="#25BAFB"
                       bg="rgba(240, 240, 240, 1)"
-                      maxW="20em"
+                      width="320px"
                       placeholder="Name"
                       type="text"
                     />
@@ -1287,10 +1287,10 @@ function One() {
                       errorBorderColor="red.600"
                       focusBorderColor="#25BAFB"
                       bg="rgba(240, 240, 240, 1)"
-                      maxW="20em"
+                      width="320px"
                       placeholder="Email"
                     />
-                    <div style={{ display: "flex" }}>
+                    <div style={{ display: "flex",maxWidth:"20em"}}>
                       <Select
                         value={countryCode}
                         onChange={(e) => {
@@ -1316,7 +1316,7 @@ function One() {
                         bg="rgba(240, 240, 240, 1)"
                         borderTopLeftRadius="0"
                         borderBottomLeftRadius="0"
-                        maxW="20em"
+                        width="232px"
                         placeholder="Number"
                       ></Input>
                     </div>
