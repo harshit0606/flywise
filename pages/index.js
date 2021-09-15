@@ -785,6 +785,7 @@ degree:"Information systems"
             logo={testimonial.logo}
             text={testimonial.text}
             uni={testimonial.uni}
+            key={idx}
             />
 
          
