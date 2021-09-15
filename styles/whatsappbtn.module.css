@@ -44,8 +44,9 @@
 }
 .test{
 	height:100%;
-
-	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+	width:730px;
 	background-color:   #F6F7F8;
 	padding:30px 30px;
 	border-radius: 10px;
@@ -116,6 +117,9 @@
 .linkk11{
 	opacity:0;
 }
+.react-multiple-carousel__arrow--left{
+	left: -100px !important;
+}
 
 .degree{
 	font-size: 16px;
@@ -129,6 +133,22 @@
 	}
 	100%{
 		opacity: 1;
+	}
+}
+
+@media(max-width:1500px){
+	.test{
+		width:630px;
+	}
+}
+@media(max-width:1400px){
+	.test{
+		width:600px;
+	}
+}
+@media(max-width:1200px){
+	.test{
+		width:730px
 	}
 }
 @media(max-width:500px){

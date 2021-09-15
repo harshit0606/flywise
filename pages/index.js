@@ -22,9 +22,39 @@ import classes from "../styles/whatsappbtn.module.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { TweenMax, Expo } from "gsap";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 
 export default function Home() {
+
+
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 2,
+      slidesToSlide: 2, // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1200, min: 700 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 965, min: 643 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    smalie: {
+      breakpoint: { max: 643, min: 0 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+  };
+
+
+
+
   let one=useRef(null);
   let two=useRef(null);
   let three=useRef(null);
@@ -698,7 +728,35 @@ export default function Home() {
         <GridItem py="8" colSpan="12" bg="white" rowSpan="12">
           <Heading textAlign="center">Testimonials</Heading>
         </GridItem>
-
+        <GridItem
+          rowSpan={12}
+          colSpan={12}
+          
+          // colSpan={{base: 12, md:6}}
+      
+            
+          mt="4"
+          
+        >
+        <Carousel
+        
+        swipeable={true}
+        draggable={false}
+        showDots={false}
+        responsive={responsive}
+        ssr={true} // means to render carousel on server-side.
+        infinite={true}
+        autoPlay={true}
+        autoPlaySpeed={10000}
+        keyBoardControl={true}
+        customTransition=""
+        transitionDuration={500}
+        containerClass="carousel-container"
+        removeArrowOnDeviceType={[, "mobile","smalie"]}
+        dotListClass="custom-dot-list-style"
+        itemClass="carousel-item-padding-40-px"
+        
+      >
         {[
           
 {
@@ -719,23 +777,7 @@ degree:"Business analytics "
 degree:"Information systems"
 },
         ].map((testimonial, idx) => (
-          <GridItem
-          marginLeft="auto"
-          marginRight="auto"
-          
-          bg="white"
-    
-          // boxShadow="base"
-          // _hover={{ boxShadow: 'lg' }}
-          transition="all 0.2s"
-          // rounded="md"
-          pb="8"
-          
-          // px="2"
-          key={idx}
-          colSpan={["12", "12", "12", "12", "6"]}
-          rowSpan={"12"}
-          >
+         
             <TestimonialCard
             name={testimonial.name}
             degree={testimonial.degree}
@@ -743,10 +785,13 @@ degree:"Information systems"
             logo={testimonial.logo}
             text={testimonial.text}
             uni={testimonial.uni}
+            key={idx}
             />
 
-          </GridItem>
+         
         ))}
+        </Carousel>
+        </GridItem>
         <GridItem
           rowSpan={12}
           colSpan={12}
