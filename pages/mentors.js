@@ -6,7 +6,7 @@ import Navbar from './common/navbar';
 const MENTORS = [
 	{
 		//1
-		name: 'Pavan Kumar Reddy Kanjula',
+		name: 'Pavan Kumar Kanjula',
 		image: 'PavanKumarReddyKanjula',
 		position: 'Software Engineer',
 		uni: 'California State University, Eastbay',
@@ -36,7 +36,7 @@ const MENTORS = [
 	},
 	{
 		//4
-		name: 'Phani Chandra Sourabh Reddy',
+		name: 'Phani Chandra Sourabh ',
 		image: 'PhaniChandraSourabhReddy',
 		position: 'Software Engineer',
 		uni: 'University of South Florida, Florida',
@@ -46,7 +46,7 @@ const MENTORS = [
 	},
 	{
 		//5
-		name: 'Puneetha Reddy Kanjula',
+		name: 'Puneetha Kanjula',
 		image: 'PuneethaReddyKanjula',
 		position: 'Sr Technical Program Manager',
 		uni: 'University of Hartford, Hartford',
@@ -56,7 +56,7 @@ const MENTORS = [
 	},
 	{
 		//6
-		name: 'Bipin Kumar Reddy Algubelli',
+		name: 'Bipin Kumar Algubelli',
 		image: 'BipinKumarReddyAlgubelli',
 		position: 'Data Engineer',
 		uni: 'Southern Illinois University, Wisconsin',

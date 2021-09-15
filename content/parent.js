@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import Image from "next/image";
 import Whats from "../public/images/icons/whattt.png";
 import classes from "../styles/whatsappbtn.module.css";
-import { TriangleDownIcon } from "@chakra-ui/icons";
+import { ArrowDownIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
 import NLink from 'next/link';
 
@@ -24,7 +24,7 @@ const Parentdiv = ({ children }) => {
       {path =="/mentors"?(
         <NLink href="/mentors/#mentorrs">
         <div className={classes.godown}>
-        <TriangleDownIcon/>
+        <ArrowDownIcon/>
         </div>
         </NLink>
       ):null}
