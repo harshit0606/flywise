@@ -24,7 +24,7 @@ const Parentdiv = ({ children }) => {
       {path =="/mentors"?(
         <NLink href="/mentors/#mentorrs">
         <div className={classes.godown}>
-        <ArrowDownIcon/>
+        <ArrowDownIcon color="white"  />
         </div>
         </NLink>
       ):null}

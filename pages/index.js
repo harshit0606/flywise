@@ -491,7 +491,7 @@ export default function Home() {
 
           // bg={'linear-gradient(180deg, #E6F6FF 41.47%, rgba(255, 255, 255, 0) 100%)'}
         >
-          <Heading my={["2", "4", "8", "16", "16"]} textAlign="center">
+          <Heading my={["4", "4", "8", "16", "16"]} textAlign="center">
             How Flywise is better than any other overseas agencies?
           </Heading>
 
@@ -516,7 +516,7 @@ export default function Home() {
               <Heading
                 textAlign="center"
                 color="white"
-                fontSize={["md", "2xl", "2xl", "2xl", "3xl"]}
+                fontSize={["xl", "2xl", "2xl", "2xl", "3xl"]}
                 px={["2", "1", "2", "3", "4"]}
                 py={["2", "4", "8", "16", "16"]}
               >
@@ -567,7 +567,7 @@ export default function Home() {
               <Heading
                 textAlign="center"
                 color="white"
-                fontSize={["md", "2xl", "2xl", "2xl", "3xl"]}
+                fontSize={["xl", "2xl", "2xl", "2xl", "3xl"]}
                 px={["2", "1", "2", "3", "4"]}
                 py={["2", "4", "8", "16", "16"]}
               >
@@ -595,7 +595,7 @@ export default function Home() {
               <Heading
                 textAlign="center"
                 color="white"
-                fontSize={["md", "2xl", "2xl", "2xl", "3xl"]}
+                fontSize={["xl", "2xl", "2xl", "2xl", "3xl"]}
                 px={["2", "1", "2", "3", "4"]}
                 py={["2", "4", "8", "16", "16"]}
               >
@@ -645,7 +645,7 @@ export default function Home() {
               <Heading
                 textAlign="center"
                 color="white"
-                fontSize={["md", "2xl", "2xl", "2xl", "3xl"]}
+                fontSize={["xl", "2xl", "2xl", "2xl", "3xl"]}
                 // px={[]}
                 py={["2", "4", "8", "16", "16"]}
                 px={["0", "1", "2", "3", "4"]}
@@ -710,7 +710,7 @@ export default function Home() {
                   maxW={{ base: "75%", md: "70%" }}
                   textAlign={{ base: "justify", md: "left" }}
                   my="12"
-                  mx="auto"
+                  
                   fontWeight="400"
                 >
                   Our founders and mentors have personally faced/seen all these
