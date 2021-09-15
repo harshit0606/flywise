@@ -1317,7 +1317,7 @@ function One() {
                         borderTopLeftRadius="0"
                         borderBottomLeftRadius="0"
                         maxW="20em"
-                        placeholder="Number with country code"
+                        placeholder="Number"
                       ></Input>
                     </div>
                     <Checkbox
