@@ -74,16 +74,16 @@ export default function Home() {
                 {" "}
                 that
               </span>{" "}
-              <span className={classes.link2} data-aos-duration="1000" data-aos="fade-up" data-aos-delay="150">travels</span>{" "}
-              <span className={classes.linkk3} data-aos-duration="1000"   data-aos="fade-up" data-aos-delay="300">with</span>{" "}
-              <span className={classes.linkk4} data-aos-duration="1000"  data-aos="fade-up" data-aos-delay="450">you</span>{" "}
-              <span className={classes.linkk5} data-aos-duration="1000"  data-aos="fade-up" data-aos-delay="600">till</span>{" "}
-              <span className={classes.linkk6} data-aos-duration="1000"  data-aos="fade-up" data-aos-delay="750">you</span>{" "}
-              <span className={classes.linkk7} data-aos-duration="1000"  data-aos="fade-up" data-aos-delay="900">land</span>{" "}
-              <span className={classes.linkk8} data-aos-duration="1000"  data-aos="fade-up" data-aos-delay="1050">your</span>{" "}
-              <span className={classes.linkk9} data-aos-duration="1000" data-aos="fade-up" data-aos-delay="1200">dream</span>{" "}
-              <span className={classes.linkk10} data-aos-duration="1000"  data-aos="fade-up" data-aos-delay="1350">job</span>{" "}
-              <span className={classes.linkk11} data-aos-duration="1000"  data-aos="fade-up" data-aos-delay="1500">abroad</span>
+              <span className={classes.link2}  data-aos-once="true" data-aos-duration="1000" data-aos="fade-up" data-aos-delay="150">travels</span>{" "}
+              <span className={classes.linkk3} data-aos-once="true" data-aos-duration="1000"   data-aos="fade-up" data-aos-delay="300">with</span>{" "}
+              <span className={classes.linkk4} data-aos-once="true" data-aos-duration="1000"  data-aos="fade-up" data-aos-delay="450">you</span>{" "}
+              <span className={classes.linkk5} data-aos-once="true" data-aos-duration="1000"  data-aos="fade-up" data-aos-delay="600">till</span>{" "}
+              <span className={classes.linkk6} data-aos-once="true" data-aos-duration="1000"  data-aos="fade-up" data-aos-delay="750">you</span>{" "}
+              <span className={classes.linkk7} data-aos-once="true" data-aos-duration="1000"  data-aos="fade-up" data-aos-delay="900">land</span>{" "}
+              <span className={classes.linkk8} data-aos-once="true" data-aos-duration="1000"  data-aos="fade-up" data-aos-delay="1050">your</span>{" "}
+              <span className={classes.linkk9} data-aos-once="true" data-aos-duration="1000" data-aos="fade-up" data-aos-delay="1200">dream</span>{" "}
+              <span className={classes.linkk10} data-aos-once="true" data-aos-duration="1000"  data-aos="fade-up" data-aos-delay="1350">job</span>{" "}
+              <span className={classes.linkk11} data-aos-once="true" data-aos-duration="1000"  data-aos="fade-up" data-aos-delay="1500">abroad</span>
             </Link>
           </Heading>
 
