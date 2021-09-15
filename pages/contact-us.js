@@ -15,6 +15,8 @@ import { LocalConvenienceStoreOutlined } from '@material-ui/icons'
 import React, { useState } from 'react'
 import Footer from './common/footerr'
 import Navbar from './common/navbar'
+import classes from "../styles/header.module.css";
+
 
 function ContactUS() {
   const [name, setName] = useState('')
@@ -64,10 +66,10 @@ function ContactUS() {
         <GridItem
           zIndex="1"
           py={['2rem', '1rem', '2rem', '3rem', '10rem']}
-          pl={['0.4rem', '1rem', '3rem', '6rem', '3rem']}
-          pr={['0.4rem', '1rem', '1rem', '2rem', '3rem']}
+          pl={['0.4rem', '1rem', '1rem', '6rem', '4rem']}
+          pr={['0.4rem', '1rem', '1rem', '2rem', '4rem']}
           rowSpan={12}
-          colSpan={[12, 12, 6, 6, 6]}
+          colSpan={[12, 12, 6, 7, 7]}
           // bg={bg}
         >
           <Heading
@@ -133,31 +135,33 @@ function ContactUS() {
         <GridItem
           // pr={[ '0.4rem', '1rem', '3rem', '6rem', '8rem' ]}
           rowSpan={12}
-          marginTop={{ base: '20px', sm: '0' }}
-          colSpan={[12, 12, 6, 6, 6]}
-          bg="linear-gradient(180deg, rgba(230, 246, 255, 0.6) 41.47%, rgba(255, 255, 255, 0) 100%)"
-          py={['1rem', '1rem', '2rem', '3rem', '10rem']}
-          px="10"
+          marginTop={{ base: '20px', sm: '0px' }}
+          colSpan={[12, 12, 6, 5, 5]}
+         
+          py={['1rem', '3rem', '3rem', '3rem', '10rem']}
+          px={{base:"4",md:"0"}}
           zIndex="0"
           transform="translate(0,-3rem)"
         >
+        <div className={classes.contactCard}>
           <Heading
             textAlign="center"
-            color="rgba(156, 156, 156, 1)"
+            color="rgba(110,110,110)"
             fontSize="xl"
           >
             Want more information?
           </Heading>
           <Heading
-            fontSize={{ base: '22px', sm: '40px' }}
-            my={{ base: '4', sm: '8' }}
+            fontSize={{ base: '18px', sm: '25px' }}
+            my={{ base: '4', sm: '4' }}
             textAlign="center"
+            color="rgba(110,110,110)"
           >
             Ask us your questions or schedule a meeting
           </Heading>
           <Center>
             <Box w={['18rem', '22rem', '36rem', '44rem', '50rem']}>
-              <Text mt="8" mb="2">
+              <Text mt="4" mb="2" color="rgba(110,110,110)">
                 Your name
               </Text>
               <Input
@@ -169,7 +173,7 @@ function ContactUS() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
-              <Text mt="8" mb="2">
+              <Text mt="4" mb="2" color="rgba(110,110,110)">
                 Your Email
               </Text>
               <Input
@@ -182,7 +186,7 @@ function ContactUS() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <Text mt="8" mb="2">
+              <Text mt="4" mb="2" color="rgba(110,110,110)">
                 Your Number
               </Text>
               <Input
@@ -195,7 +199,7 @@ function ContactUS() {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
               />
-              <Text mt="8" mb="2">
+              <Text mt="4" mb="2" color="rgba(110,110,110)">
                 Your message
               </Text>
               {/* < placeholder="Here is a sample placeholder" /> */}
@@ -227,6 +231,7 @@ function ContactUS() {
               Send request
             </Button>
           </Center>
+          </div>
         </GridItem>
       </Grid>
       <Footer />

@@ -119,7 +119,7 @@ export default function Home() {
         </GridItem>
         <GridItem
           py={["0.4rem", "1rem", "2rem", "3rem", "4rem"]}
-          pl={["0.5rem", "1rem", "3rem", "6rem", "12rem"]}
+          pl={["0.5rem", "1rem", "1rem", "4rem", "8rem"]}
           pr={["0.5rem", "1rem", "1rem", "2rem", "3rem"]}
           rowSpan={12}
           colSpan={[12, 12, 7, 7, 7]}
@@ -135,13 +135,13 @@ export default function Home() {
           <Heading
             mt={{base:"8",md:"4"}}
             textAlign={{ base: "center", md: "left" }}
-            fontSize={["2xl", "2xl", "3xl", "3xl", "3xl"]}
+            fontSize={["2xl", "2xl", "2xl", "3xl", "4xl"]}
           >
             India’s best overseas education platform
             <Link
               _hover={{ textDecoration: "none" }}
               fontWeight="bold"
-              fontSize={["2xl", "2xl", "3xl", "3xl", "3xl"]}
+              fontSize={["2xl", "2xl", "2xl", "3xl", "4xl"]}
               color="#0DB3FB"
             >
               <span ref={eleven} className={classes.linkk1} >
@@ -209,13 +209,13 @@ export default function Home() {
           </Flex>
         </GridItem>
         <GridItem
-          pr={["0.4rem", "1rem", "3rem", "6rem", "12rem"]}
+          pr={["0.4rem", "1rem", "1rem", "2rem", "10rem"]}
           rowSpan={12}
-          my={{base:"10px",md:"30px"}}
+          my={{base:"10px",md:"0px"}}
           colSpan={[12, 12, 5, 5, 5]}
           bg={bg}
         >
-          <Image mt="16" src="/images/land (2).svg" alt="main" />
+          <Image mt={{base:"10px", lg:"16px"}} src="/images/illus.svg" alt="main" />
         </GridItem>
         <GridItem
           px={["0.4rem", "1rem", "3rem", "6rem", "10rem"]}
@@ -618,7 +618,7 @@ export default function Home() {
                 fontSize={["md", "2xl", "2xl", "2xl", "3xl"]}
                 // px={[]}
                 py={["2", "4", "8", "16", "16"]}
-                px={["2", "1", "2", "3", "4"]}
+                px={["0", "1", "2", "3", "4"]}
               >
                 Best professional network in a foreign land
               </Heading>
@@ -677,10 +677,10 @@ export default function Home() {
                 ))}
 
                 <Text
-                  maxW={{ base: "90%", md: "70%" }}
-                  textAlign={{ base: "center", md: "left" }}
+                  maxW={{ base: "75%", md: "70%" }}
+                  textAlign={{ base: "justify", md: "left" }}
                   my="12"
-                  mx="0"
+                  mx="auto"
                   fontWeight="400"
                 >
                   Our founders and mentors have personally faced/seen all these
