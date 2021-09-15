@@ -16,16 +16,90 @@ import FaqList from "./common/faqs";
 import Footer from "./common/footerr";
 import Navbar from "./common/navbar";
 import faqs from "./../content/homeFaqs";
-import { useEffect } from "react";
+import { useEffect,useRef } from "react";
 import TestimonialCard from "../component/testimonialCard";
 import classes from "../styles/whatsappbtn.module.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { TweenMax, Expo } from "gsap";
+
 
 export default function Home() {
+  let one=useRef(null);
+  let two=useRef(null);
+  let three=useRef(null);
+  let four=useRef(null);
+  let five=useRef(null);
+  let six=useRef(null);
+  let seven=useRef(null);
+  let eight=useRef(null);
+  let nine=useRef(null);
+  let ten=useRef(null);
+  let eleven=useRef(null);
+
+
+
+
   useEffect(() => {
-    AOS.init();
-  }, []);
+   
+    TweenMax.to(one.current,1,{
+      delay:0.2,
+      opacity:1,
+      ease: Expo.easeInOut,
+    });
+    TweenMax.to(two.current,1,{
+      delay:.4,
+      opacity:1,
+      ease: Expo.easeInOut,
+    });
+    TweenMax.to(three.current,1,{
+      delay:0.6,
+      opacity:1,
+      ease: Expo.easeInOut,
+    });
+    TweenMax.to(four.current,1,{
+      delay:0.8,
+      opacity:1,
+      ease: Expo.easeInOut,
+    });
+
+    TweenMax.to(five.current,1,{
+      delay:1,
+      opacity:1,
+
+      ease: Expo.easeInOut,
+    });
+    TweenMax.to(six.current,1,{
+      delay:1.2,
+      opacity:1,
+      ease: Expo.easeInOut,
+    });
+    TweenMax.to(seven.current,1,{
+      delay:1.4,
+      opacity:1,
+      ease: Expo.easeInOut,
+    });
+    TweenMax.to(eight.current,1,{
+      delay:1.6,
+      opacity:1,
+      ease: Expo.easeInOut,
+    });
+
+    TweenMax.to(nine.current,1,{
+      delay:1.8,
+      opacity:1,
+      ease: Expo.easeInOut,
+    });
+    TweenMax.to(ten.current,1,{
+      delay:2,
+      opacity:1,
+      ease: Expo.easeInOut,
+    });
+    TweenMax.to(eleven.current,1,{
+      opacity:1,
+      ease: Expo.easeInOut,
+    });
+}, []);
   // let bg = 'red';
   let bg = "transparent";
 
@@ -70,20 +144,20 @@ export default function Home() {
               fontSize={["2xl", "2xl", "3xl", "3xl", "3xl"]}
               color="#0DB3FB"
             >
-              <span className={classes.linkk1} data-aos-once="true" data-aos-duration="1000" data-aos="fade-up">
+              <span ref={eleven} className={classes.linkk1} >
                 {" "}
                 that
               </span>{" "}
-              <span className={classes.link2}  data-aos-once="true" data-aos-duration="1000" data-aos="fade-up" data-aos-delay="150">travels</span>{" "}
-              <span className={classes.linkk3} data-aos-once="true" data-aos-duration="1000"   data-aos="fade-up" data-aos-delay="300">with</span>{" "}
-              <span className={classes.linkk4} data-aos-once="true" data-aos-duration="1000"  data-aos="fade-up" data-aos-delay="450">you</span>{" "}
-              <span className={classes.linkk5} data-aos-once="true" data-aos-duration="1000"  data-aos="fade-up" data-aos-delay="600">till</span>{" "}
-              <span className={classes.linkk6} data-aos-once="true" data-aos-duration="1000"  data-aos="fade-up" data-aos-delay="750">you</span>{" "}
-              <span className={classes.linkk7} data-aos-once="true" data-aos-duration="1000"  data-aos="fade-up" data-aos-delay="900">land</span>{" "}
-              <span className={classes.linkk8} data-aos-once="true" data-aos-duration="1000"  data-aos="fade-up" data-aos-delay="1050">your</span>{" "}
-              <span className={classes.linkk9} data-aos-once="true" data-aos-duration="1000" data-aos="fade-up" data-aos-delay="1200">dream</span>{" "}
-              <span className={classes.linkk10} data-aos-once="true" data-aos-duration="1000"  data-aos="fade-up" data-aos-delay="1350">job</span>{" "}
-              <span className={classes.linkk11} data-aos-once="true" data-aos-duration="1000"  data-aos="fade-up" data-aos-delay="1500">abroad</span>
+              <span ref={one} className={classes.linkk2}>travels</span>{" "}
+              <span ref={two} className={classes.linkk3}>with</span>{" "}
+              <span ref={three} className={classes.linkk4}>you</span>{" "}
+              <span ref={four} className={classes.linkk5}>till</span>{" "}
+              <span  ref={five} className={classes.linkk6}>you</span>{" "}
+              <span ref={six} className={classes.linkk7}>land</span>{" "}
+              <span ref={seven} className={classes.linkk8}>your</span>{" "}
+              <span ref={eight} className={classes.linkk9}>dream</span>{" "}
+              <span ref={nine} className={classes.linkk10}>job</span>{" "}
+              <span ref={ten} className={classes.linkk11}>abroad</span>
             </Link>
           </Heading>
 
