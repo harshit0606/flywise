@@ -23,11 +23,25 @@ import {
   VStack,
   Tooltip,
 } from "@chakra-ui/react";
+import { Select } from "@chakra-ui/react";
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuIcon,
+  MenuCommand,
+  MenuDivider,
+} from "@chakra-ui/react";
 import axios from "axios";
 import React, { useState } from "react";
 import Navbar from "../common/navbar";
 import { Redirect } from "next";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
+import { ChevronDownIcon } from "@chakra-ui/icons";
 
 import {
   auth,
@@ -36,24 +50,24 @@ import {
 } from "../../content/firebase";
 
 function One() {
-	const router=useRouter();
-	const configureRecaptcha = () => {
-		console.log(auth);
-		window.recaptchaVerifier = new RecaptchaVerifier(
-		  "sign-in-button",
+  const router = useRouter();
+  const configureRecaptcha = () => {
+    console.log(auth);
+    window.recaptchaVerifier = new RecaptchaVerifier(
+      "sign-in-button",
 
-		  {	callback: (response) => {
-			  // reCAPTCHA solved, allow signInWithPhoneNumber.
-			  onSignInSubmit();
-			},
-		  },
-		  auth
-		);
-	  };
+      {
+        callback: (response) => {
+          // reCAPTCHA solved, allow signInWithPhoneNumber.
+          onSignInSubmit();
+        },
+      },
+      auth
+    );
+  };
   const onSignInSubmit = () => {
-  
     configureRecaptcha();
-    const phoneNumber = userPhone;
+    const phoneNumber = countryCode + userPhone;
     console.log(phoneNumber);
     const appVerifier = window.recaptchaVerifier;
     signInWithPhoneNumber(auth, phoneNumber, appVerifier)
@@ -62,8 +76,8 @@ function One() {
         // user in with confirmationResult.confirm(code).
         window.confirmationResult = confirmationResult;
         console.log("send");
-		router.push('/otp');
-		
+        router.push("/otp");
+
         // ...
       })
       .catch((error) => {
@@ -85,6 +99,7 @@ function One() {
   const [pe, setPe] = useState(1);
   const [greTraining, setGreTraining] = useState("yes");
   const [session, setSession] = useState("Spring 2022");
+  const [countryCode, setCountryCode] = useState("+91");
   const [greQuant, setGreQuant] = useState();
   const [greVerbal, setGreVerbal] = useState();
   const [ieltsToefl, setIeltsToefl] = useState();
@@ -161,24 +176,22 @@ function One() {
         } else {
           setSuccess("Profile Submitted");
           console.log(" ot success");
-		  onSignInSubmit();
-          
-          
+          onSignInSubmit();
         }
       })
       .catch((err) => {
-		  if(err){
-			  console.log(err);
-        console.log(err.response.data.error);
-        if (
-          err.response.data.error ==
-          "This user has already applied for profile evaluation"
-        ) {
-          setError("You have already applied");
-        } else {
-          setError("There was an error");
+        if (err) {
+          console.log(err);
+          console.log(err.response.data.error);
+          if (
+            err.response.data.error ==
+            "This user has already applied for profile evaluation"
+          ) {
+            setError("You have already applied");
+          } else {
+            setError("There was an error");
+          }
         }
-	}
       })
       .finally(() => setLoading(false));
   }
@@ -490,9 +503,10 @@ function One() {
                     fontWeight="500"
                   >
                     GRE Quant score
-                    <Link _hover={{ textDecoration: "none" }} color="red">
-                      
-                    </Link>
+                    <Link
+                      _hover={{ textDecoration: "none" }}
+                      color="red"
+                    ></Link>
                   </Text>
 
                   <Text
@@ -529,9 +543,10 @@ function One() {
                     fontWeight="500"
                   >
                     GRE Verbal score
-                    <Link _hover={{ textDecoration: "none" }} color="red">
-                      
-                    </Link>
+                    <Link
+                      _hover={{ textDecoration: "none" }}
+                      color="red"
+                    ></Link>
                   </Text>
 
                   <Text
@@ -568,9 +583,10 @@ function One() {
                     fontWeight="500"
                   >
                     IELTS/TOEFL
-                    <Link _hover={{ textDecoration: "none" }} color="red">
-                      
-                    </Link>
+                    <Link
+                      _hover={{ textDecoration: "none" }}
+                      color="red"
+                    ></Link>
                   </Text>
 
                   <Text
@@ -660,7 +676,6 @@ function One() {
                         Previous
                       </Button>
                       <Button
-                       
                         color="white"
                         px="8"
                         mb="4"
@@ -848,7 +863,6 @@ function One() {
                     value={cgpa}
                     onChange={(e) => setCgpa(e)}
                     step={0.1}
-                    
                     min={5}
                     max={10}
                     // py="6"
@@ -1276,16 +1290,36 @@ function One() {
                       maxW="20em"
                       placeholder="Email"
                     />
-                    <Input
-                      // ml={{ base: '4', md: '4' }}
-                      value={userPhone}
-                      onChange={(e) => setUserPhone(e.target.value)}
-                      py="3"
-                      focusBorderColor="#25BAFB"
-                      bg="rgba(240, 240, 240, 1)"
-                      maxW="20em"
-                      placeholder="Number with country code"
-                    />
+                    <div style={{ display: "flex" }}>
+                      <Select
+                        value={countryCode}
+                        onChange={(e) => {
+                          console.log(e.target.value);
+                          setCountryCode(e.target.value);
+                        }}
+                        width="88px"
+                        height="40px"
+                        size="sm"
+                        bg="rgba(240, 240, 240, 1)"
+                      >
+                        <option value="+91" defaultValue>
+                          +91
+                        </option>
+                        <option value="+1">+1</option>
+                      </Select>
+                      <Input
+                        // ml={{ base: '4', md: '4' }}
+                        value={userPhone}
+                        onChange={(e) => setUserPhone(e.target.value)}
+                        py="3"
+                        focusBorderColor="#25BAFB"
+                        bg="rgba(240, 240, 240, 1)"
+                        borderTopLeftRadius="0"
+                        borderBottomLeftRadius="0"
+                        maxW="20em"
+                        placeholder="Number with country code"
+                      ></Input>
+                    </div>
                     <Checkbox
                       onChange={() => setTnC(!tnC)}
                       value={tnC}
@@ -1295,9 +1329,8 @@ function One() {
                       <Link color="#0DB3FB">Terms and Conditions</Link>
                     </Checkbox>
 
-					<div id="sign-in-button"></div>
+                    <div id="sign-in-button"></div>
                   </VStack>
-				  
                 </GridItem>
                 <GridItem rowSpan={12} colSpan={15}>
                   <Center>

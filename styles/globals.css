@@ -20,6 +20,17 @@ a {
 	border-bottom: 2px solid black;
 	border-radius: 0;
 }
+.react-multiple-carousel__arrow--left{
+	left:10px !important;
+	background-color: rgba(138, 138, 138, 0.9)!important;
+
+
+}
+.react-multiple-carousel__arrow--right{
+	right:10px !important;
+	background-color: rgba(138, 138, 138, 0.9)!important;
+
+}
 
 
 .sticky {
