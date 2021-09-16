@@ -8,13 +8,13 @@ import NLink from 'next/link';
 
 const Parentdiv = ({ children }) => {
   const path = useRouter().pathname;
- 
+ const text="Hi team, I am looking forward to getting connected with the Flywise team and learn more about study abroad opportunities!";
   return (
     <div>
       <Fragment>{children}</Fragment>
       {path !== "/profile-evaluation" ? (
         <div className={classes.what}>
-        <a style={{ color: 'black' }} href="https://api.whatsapp.com/send?phone=19254459180&text=Hey There" target='_blank'>
+        <a style={{ color: 'black' }} href={`https://api.whatsapp.com/send?phone=19254459180&text=${text}` }target='_blank'>
                       <Image alt="whatsapp" src={Whats} />
               </a>
           
