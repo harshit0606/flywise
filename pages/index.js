@@ -783,7 +783,7 @@ text:"I reached out to Pavan (founder) on Linkedin before Flywise was incorporat
   uni:"Stevens institute of technology",
   degree:"Business intelligence and analytics",
   text:"I have my Bachelor's in Mechanical Engineering and was absolutely clueless on what to or how to pursue my Master's. My mentor Pavan, at flywise very patiently listened to all my questions, enlightened me about the IT industry and their pay structure and expertly guided me on what course and university to choose.I am really delighted and overwhelmed with the help and support Flywise provided.",
-  img: "/images/mentors/Venkatesh.png",
+  img: "/images/mentors/venkatesh.png",
   logo:"/images/icons/steven.png",
 
 },
