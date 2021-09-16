@@ -270,4 +270,14 @@
 	.test{
 		flex-direction: column;
 	}
+	.textDiv{
+		width: 370px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+@media(max-width:370px){
+	.textDiv{
+		width:320px;
+	}
 }
