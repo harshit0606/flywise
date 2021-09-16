@@ -160,7 +160,9 @@
 @media(max-width:1400px){
 	.test{
 		width:650px;
-	}
+		padding:20px 15px;
+		min-height: 440px;
+		}
 	.images{
 		height:350px;
 	width:330px;
@@ -172,8 +174,17 @@
 }
 @media (max-width:1300px){
 	.test{
-		width:620px;
-		min-height: 460px;
+		width:610px;
+		min-height: 450px;
+		padding:20px 10px;
+	}
+	.images{
+		height:340px;
+	width:320px;
+	}
+	.testImg{
+	height:340px;
+	width:320px;
 	}
 }
 	
