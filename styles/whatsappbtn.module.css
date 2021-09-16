@@ -42,6 +42,10 @@
 	display: none;
 
 }
+.textDiv{
+	width:650px;
+}
+
 .namediv{
 	position: absolute;
 	bottom:10px;
@@ -159,6 +163,14 @@
 @media(max-width:1200px){
 	.test{
 		width:730px
+	}
+	.textDiv{
+		width:650px;
+	}
+}
+@media(max-width:1050px){
+	.textDiv{
+		width:550px;
 	}
 }
 @media(max-width:500px){
