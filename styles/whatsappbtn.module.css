@@ -68,7 +68,9 @@
 	
 }
 .testImg{
-	object-fit: cover;
+
+	height:350px;
+	width:330px;
 }
 
 .logo{
@@ -152,17 +154,34 @@
 
 @media(max-width:1500px){
 	.test{
-		width:630px;
+		width:700px;
 	}
 }
 @media(max-width:1400px){
 	.test{
-		width:600px;
+		width:650px;
+	}
+	.images{
+		height:350px;
+	width:330px;
+	}
+	.testImg{
+	height:350px;
+	width:330px;
 	}
 }
+@media (max-width:1300px){
+	.test{
+		width:620px;
+		min-height: 460px;
+	}
+}
+	
+
 @media(max-width:1200px){
 	.test{
-		width:730px
+		width:730px;
+		min-height: 0px;
 	}
 	.textDiv{
 		width:650px;
