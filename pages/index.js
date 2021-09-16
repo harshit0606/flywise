@@ -149,7 +149,7 @@ export default function Home() {
         </GridItem>
         <GridItem
           py={["0.4rem", "1rem", "2rem", "3rem", "4rem"]}
-          pl={["0.5rem", "1rem", "3rem", "10rem", "10rem"]}
+          pl={["0.5rem", "1rem", "2rem", "3rem", "8rem"]}
           pr={["0.5rem", "1rem", "1rem", "2rem", "3rem"]}
           rowSpan={12}
           colSpan={[12, 12, 7, 7, 7]}
@@ -161,17 +161,17 @@ export default function Home() {
 							platform that travels with you till you land your dream job abroad
 						</Heading>
 					</Heading> */}
-
+          <div className={classes.textDiv}>
           <Heading
             mt={{base:"8",md:"4"}}
             textAlign={{ base: "center", md: "left" }}
-            fontSize={["2xl", "2xl", "2xl", "3xl", "4xl"]}
+            fontSize={["2xl", "2xl", "3xl", "4xl", "4xl"]}
           >
             India’s best overseas education platform
             <Link
               _hover={{ textDecoration: "none" }}
               fontWeight="bold"
-              fontSize={["2xl", "2xl", "2xl", "3xl", "4xl"]}
+              fontSize={["2xl", "2xl", "3xl", "4xl", "4xl"]}
               color="#0DB3FB"
             >
               <span ref={eleven} className={classes.linkk1} >
@@ -237,6 +237,7 @@ export default function Home() {
               </Button>
             </NLink>
           </Flex>
+          </div>
         </GridItem>
         <GridItem
           pr={["0.4rem", "1rem", "1rem", "2rem", "10rem"]}
