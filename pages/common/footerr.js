@@ -32,23 +32,23 @@ function footerr() {
         </div>
         <div className={classes.iconsDiv}>
           <div className={classes.logodiv}>
-            <Image src={Facebook} className={classes.icons} />
+           <Link href="https://www.facebook.com/flywiseoverseas" target="_blank"> <Image src={Facebook} className={classes.icons} /></Link>
           </div>
-          <Link href="https://www.instagram.com/flywise_edu/">
+          <Link href="https://www.instagram.com/flywiseoverseas/" target="_blank">
           <div className={classes.logodiv}>
             <Image src={Instagram} className={classes.icons} />
           </div>
           </Link>
-          <Link href="https://www.youtube.com/channel/UCBm5Y057pEW1jLjJhnoHcHA"><div className={classes.logodiv}>
+          <Link href="https://www.youtube.com/channel/UCBm5Y057pEW1jLjJhnoHcHA" target="_blank"><div className={classes.logodiv}>
             <Image src={Youtube} className={classes.icons} />
           </div>
           </Link>
-          <Link href="https://www.linkedin.com/company/flywiseoverseas">
+          <Link href="https://www.linkedin.com/company/flywiseoverseas" target="_blank">
           <div className={classes.logodiv}>
             <Image src={Linkedin} className={classes.icons} />
           </div>
           </Link>
-          <Link href="https://www.clubhouse.com/club/ms-in-usa-myths-busted">
+          <Link href="https://www.clubhouse.com/club/ms-in-usa-myths-busted" target="_blank">
           <div className={classes.logodiv}>
             <Image src={Clubhouse} className={classes.icons} />
           </div>

@@ -11,9 +11,12 @@ function testimonialCard(props) {
         </div>
         <div className={classes.data}>
         <p className={classes.text}>{props.text}</p>
+        <div className={classes.namediv}>
         <h2>{props.name}</h2>
         <p className={classes.degree}>{props.degree}</p>
         <p className={classes.degree}>{props.uni}</p>
+        </div>
+       
         </div>
         
         
