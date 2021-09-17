@@ -38,7 +38,7 @@ function Canada() {
     "University of Manitoba",
   ];
   let student_life_tips = [
-    "The topography and climate of America differ greatly.",
+    "The topography and climate of Canada differ greatly.",
     "Take part in their holidays and traditions.",
     "Consistent Hard work and dedication.",
   ];
@@ -257,7 +257,7 @@ function Canada() {
           </Center>
 
           <Text py="4" textAlign="center" color="white" fontSize={{base:"22px",md:"3xl",lg:"3xl"}}>
-            Things to keep in mind as an international student in the USA :
+            Things to keep in mind as an international student in the Canada :
           </Text>
           <Center>
             <UnorderedList>

@@ -44,7 +44,9 @@
 }
 .textDiv{
 	width:650px;
+	margin-top: 50px;
 }
+
 
 .namediv{
 	position: absolute;
@@ -55,7 +57,7 @@
 	margin-left: auto;
 	margin-right: auto;
 	width:730px;
-	background-color:   #F6F7F8;
+	background-color:#E6F6FF;
 	padding:30px 20px;
 	border-radius: 10px;
 	display: flex;
@@ -85,17 +87,19 @@
 .text{
 	font-size: 14px;
 	text-align: justify;
+
 }
 .data{
 	position: relative;
 	width:320px;
 	min-height: 380px;
 	margin-left: 20px;
+	color: #234A61;
 }
 .test h2{
 	font-size: 20px;
 	font-weight: 600;
-	color: #6ADBDB;
+	color: #234A61;
 	margin-top: 10px;
 
 }
@@ -142,7 +146,19 @@
 	font-weight: 600;
 	margin-top: 5px;
 }
-
+.home{
+	width:1150px;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	padding:20px 0px;
+	align-items: center;
+}
+.illuss{
+	width:500px;
+	height:450px;
+	
+}
 @keyframes gayab{
 	0%{
 		opacity: 0;
@@ -151,6 +167,7 @@
 		opacity: 1;
 	}
 }
+
 
 @media(max-width:1500px){
 	.test{
@@ -194,8 +211,13 @@
 		width:730px;
 		min-height: 0px;
 	}
+	.home{
+		flex-direction: column;
+		width: 90%;
+	}
 	.textDiv{
 		width:650px;
+		text-align: center;
 	}
 }
 @media(max-width:1050px){
@@ -212,6 +234,9 @@
 	}
 	.test{
 		flex-direction: column;
+		width:360px;
+		
+		padding:30px 30px;
 	}
 	.data{
 		margin-left: 0;
@@ -223,8 +248,37 @@
 	.godown{
 		display: flex;
 	}
-}
-@media(max-width: 450px){
+	.textDiv{
+		margin-top: 10px;
+	}
+	.illuss{
+		height: 400px;
+		width:350px;
+	}
+	.text{
+		font-size: 12px;
+	
+	}
+	.test h2{
+		font-size: 18px;
+		font-weight: 600;
+		color: #234A61;
+		margin-top: 10px;
+	
+	}
+	.degree{
+		font-size: 14px;
+		font-weight: 600;
+		margin-top: 5px;
+	}
+	.test{
+		flex-direction: column;
+	}
+	.textDiv{
+		width: 370px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 	.test{
 		
 		width:360px;
@@ -251,30 +305,11 @@
 		width:140px;
 		background-color: rgba(255, 255, 255, 0.7);
 	}
-	.text{
-		font-size: 12px;
+}
+
+@media(max-width: 450px){
 	
-	}
-	.test h2{
-		font-size: 18px;
-		font-weight: 600;
-		color: #6ADBDB;
-		margin-top: 10px;
 	
-	}
-	.degree{
-		font-size: 14px;
-		font-weight: 600;
-		margin-top: 5px;
-	}
-	.test{
-		flex-direction: column;
-	}
-	.textDiv{
-		width: 370px;
-		margin-left: auto;
-		margin-right: auto;
-	}
 }
 @media(max-width:370px){
 	.textDiv{
