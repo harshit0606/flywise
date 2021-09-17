@@ -29,6 +29,11 @@ function footerr() {
             <br />
             antioch, California, 94531
           </p>
+         <p> D.no 4-4-27/A,<br/>  
+1/5 th lane ,
+2nd floor,
+Ramanna peta,<br/> koritepadu,
+Guntur,A.P -522007.</p>
         </div>
         <div className={classes.iconsDiv}>
           <div className={classes.logodiv}>
