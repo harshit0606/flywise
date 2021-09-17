@@ -147,20 +147,11 @@ export default function Home() {
         <GridItem rowSpan={12} colSpan={12}>
           <Navbar outline="" />
         </GridItem>
-        <GridItem
-          py={["0.4rem", "1rem", "2rem", "3rem", "4rem"]}
-          pl={["0.5rem", "1rem", "2rem", "3rem", "8rem"]}
-          pr={["0.5rem", "1rem", "1rem", "2rem", "3rem"]}
-          rowSpan={12}
-          colSpan={[12, 12, 7, 7, 7]}
-          bg={bg}
-        >
-          {/* <Heading fontSize={[ 'xl', '2xl', '3xl', '4xl', '5xl' ]}>
-						India’s best overseas education
-						<Heading fontSize={[ 'xl', '2xl', '3xl', '4xl', '5xl' ]} color="#0DB3FB">
-							platform that travels with you till you land your dream job abroad
-						</Heading>
-					</Heading> */}
+        <GridItem rowSpan={12} colSpan={12}>
+          
+       
+        <div className={classes.home}>
+         
           <div className={classes.textDiv}>
           <Heading
             mt={{base:"8",md:"4"}}
@@ -209,7 +200,7 @@ export default function Home() {
             We, at Flywise, want to make that journey as smooth as possible till
             you settle yourself well.
           </Text>
-          <Flex my={{base:"10", md:"5"}} justifyContent={{ base: "center", md: "flex-start" }}>
+          <Flex my={{base:"10", md:"5"}} justifyContent={{ base: "center", md: "center",lg: "center", xl:"flex-start"}}>
             <NLink href="/profile-evaluation" passHref>
               <Button
                 variant={"solid"}
@@ -238,16 +229,15 @@ export default function Home() {
             </NLink>
           </Flex>
           </div>
-        </GridItem>
-        <GridItem
-          pr={["0.4rem", "1rem", "1rem", "2rem", "10rem"]}
-          rowSpan={12}
-          my={{base:"10px",md:"0px"}}
-          colSpan={[12, 12, 5, 5, 5]}
-          bg={bg}
-        >
-          <Image mt={{base:"10px", lg:"16px"}} src="/images/illus.svg" alt="main" />
-        </GridItem>
+        
+        
+        <div className={classes.illuss}>
+          <Image  objectFit="contain" src="/images/illus.svg" alt="main" />
+         
+         
+      </div>
+          </div>
+          </GridItem>
         <GridItem
           px={["0.4rem", "1rem", "3rem", "6rem", "10rem"]}
           rowSpan={12}
@@ -683,7 +673,7 @@ export default function Home() {
                 ml={["2", "4", "8", "16", "12"]}
               >
                 <Heading
-                  mt={{ base: "4", md: "16" }}
+                  mt={{ base: "4", md: "0" }}
                   textAlign={{ base: "center", md: "left" }}
                   mb="4"
                 >
