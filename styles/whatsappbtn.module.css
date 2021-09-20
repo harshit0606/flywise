@@ -312,6 +312,10 @@
 		width: 340px;
 		margin-left: auto;
 		margin-right: auto;
+		margin-top: 10px;
+	}
+	.home{
+		padding:0px 0px;
 	}
 	
 }
