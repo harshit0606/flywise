@@ -24,11 +24,13 @@ function footerr() {
             </div>
             <p>+19254459180</p>
           </div>
+          <h3 style={{fontWeight: "600",  fontSize: "17px"}}>California</h3>
           <p>
             5600 monaghan way,
             <br />
             antioch, California, 94531
           </p>
+          <h3 style={{fontWeight: "600",  fontSize: "17px"}}>Guntur</h3>
          <p> D.no 4-4-27/A,<br/>  
 1/5 th lane ,
 2nd floor,
