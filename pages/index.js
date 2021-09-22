@@ -154,15 +154,15 @@ export default function Home() {
          
           <div className={classes.textDiv}>
           <Heading
-            mt={{base:"8",md:"4"}}
+            mt={{base:"6",md:"4"}}
             textAlign={{ base: "center", md: "left" }}
-            fontSize={["2xl", "2xl", "3xl", "4xl", "4xl"]}
+            fontSize={["22px", "2xl", "3xl", "4xl", "4xl"]}
           >
             India’s best overseas education platform
             <Link
               _hover={{ textDecoration: "none" }}
               fontWeight="bold"
-              fontSize={["2xl", "2xl", "3xl", "4xl", "4xl"]}
+              fontSize={["22px", "2xl", "3xl", "4xl", "4xl"]}
               color="#0DB3FB"
             >
               <span ref={eleven} className={classes.linkk1} >

@@ -321,6 +321,11 @@
 }
 @media(max-width:370px){
 	.textDiv{
+		width:340px;
+	}
+}
+@media(max-width:362px){
+	.textDiv{
 		width:320px;
 	}
 }
