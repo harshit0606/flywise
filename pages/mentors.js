@@ -1,8 +1,8 @@
 import { StarIcon } from '@chakra-ui/icons';
 import { Box, Center, Flex, Grid, GridItem, Heading, Image, Link, Text, VStack, Button } from '@chakra-ui/react';
 import React from 'react';
-import Footer from './common/footerr';
-import Navbar from './common/navbar';
+import Footer from '../component/common/footerr';
+import Navbar from '../component/common/navbar';
 const MENTORS = [
 	{
 		//1

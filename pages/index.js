@@ -12,12 +12,12 @@ import {
   Link,
 } from "@chakra-ui/react";
 import NLink from "next/link";
-import FaqList from "./common/faqs";
-import Footer from "./common/footerr";
-import Navbar from "./common/navbar";
+import FaqList from "../component/common/faqs";
+import Footer from "../component/common/footerr";
+import Navbar from "../component/common/navbar";
 import faqs from "./../content/homeFaqs";
 import { useEffect,useRef } from "react";
-import TestimonialCard from "../component/testimonialCard";
+import TestimonialCard from "../component/testimonialCard"
 import classes from "../styles/whatsappbtn.module.css";
 import AOS from "aos";
 import "aos/dist/aos.css";

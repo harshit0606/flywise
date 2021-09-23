@@ -14,10 +14,10 @@ import {
   UnorderedList,
 } from "@chakra-ui/react";
 import React, { useRef } from "react";
-import FaqList from "../common/faqs";
-import Faq from "../common/faqs";
-import Footer from "../common/footerr";
-import Navbar from "../common/navbar";
+import FaqList from "../../component/common/faqs";
+import Faq from "../../component/common/faqs";
+import Footer from "../../component/common/footerr";
+import Navbar from "../../component/common/navbar";
 import faqs from "../../content/usaFaqs";
 
 function USA() {

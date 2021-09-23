@@ -1,11 +1,11 @@
 import React from "react";
-import Footer from "./common/footerr";
+import Footer from "../component/common/footerr";
 import Image from "next/image";
-import Navbar from "./common/navbar";
+import Navbar from "../component/common/navbar";
 import NLink from 'next/link';
-import pngg from "../public/images/icons/pana.png";
+//import pngg from "../public/images/icons/pana.png";
 import classes from "../styles/whatsappbtn.module.css";
-import ComingSoon from "../public/images/icons/profile.png";
+//import ComingSoon from "../public/images/icons/profile.png";
 import {
   Box,
   Center,
@@ -41,9 +41,9 @@ function courses() {
           pr={["0.4rem", "1rem", "1rem", "2rem", "14rem"]}
         >
           <div className={classes.pnggg}>
-            <Image objectFit="cotain" src={pngg} />
+            <Image objectFit="contain" src="/images/icons/pana.png" height="320px"  width="320px" />
             <br/>
-            <Image src={ComingSoon} height="100px" width="500px" />
+            <Image src="/images/icons/profile.png" height="50px" width="320px" />
             <NLink href="/" passHref>
             <Button
               color="white"
