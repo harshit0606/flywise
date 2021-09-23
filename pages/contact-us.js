@@ -13,8 +13,8 @@ import {
 } from '@chakra-ui/react'
 import { LocalConvenienceStoreOutlined } from '@material-ui/icons'
 import React, { useState } from 'react'
-import Footer from './common/footerr'
-import Navbar from './common/navbar'
+import Footer from '../component/common/footerr';
+import Navbar from '../component/common/navbar';
 import classes from "../styles/header.module.css";
 
 

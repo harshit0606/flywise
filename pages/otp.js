@@ -6,9 +6,9 @@ import {
 } from "../content/firebase";
 import React from "react";
 import { useRouter } from "next/router";
-import Footer from "./common/footerr";
+import Footer from "../component/common/footerr";
 import Image from "next/image";
-import Navbar from "./common/navbar";
+import Navbar from "../component/common/navbar"
 import NLink from "next/link";
 import pngg from "../public/images/icons/Group.png";
 import classes from "../styles/whatsappbtn.module.css";

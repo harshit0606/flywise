@@ -38,7 +38,7 @@ import {
 } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useState } from "react";
-import Navbar from "../common/navbar";
+import Navbar from "../../component/common/navbar";
 import { Redirect } from "next";
 import { useRouter } from "next/router";
 import { ChevronDownIcon } from "@chakra-ui/icons";
