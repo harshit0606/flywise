@@ -187,18 +187,16 @@ export default function Home() {
             my="4"
             fontSize={{ base: "16px", md: "16px" }}
           >
-            Why do we go abroad? To study more, land on a good job, earn enough,
-            and settle for a good life. Right? Most of us dream of achieving
-            this instantly as soon as we get an admission. But the real journey
-            starts when you land abroad.
+          Why do we go abroad? To pursue higher education, land a secure and stable job, earn a steady income and
+           further pursue our dreams. Most of us dream of achieving
+           this instantly as soon as we get an admission; however, the real journey starts when you land abroad.
           </Text>
           <Text
             textAlign={{ base: "center", md: "left" }}
             my="4"
             fontSize={{ base: "16px", md: "16px" }}
           >
-            We, at Flywise, want to make that journey as smooth as possible till
-            you settle yourself well.
+          Our team at Flywise can support you along this new journey and help land your dream job.
           </Text>
           <Flex my={{base:"10", md:"5"}} justifyContent={{ base: "center", md: "center",lg: "center", xl:"flex-start"}}>
             <NLink href="/profile-evaluation" passHref>
