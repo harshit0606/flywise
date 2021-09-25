@@ -43,29 +43,29 @@ import { Redirect } from "next";
 import { useRouter } from "next/router";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
-import {
-  auth,
-  RecaptchaVerifier,
-  signInWithPhoneNumber,
-} from "../../content/firebase";
+ import {
+   auth,
+   RecaptchaVerifier,
+   signInWithPhoneNumber,
+ } from "../../content/firebase";
 
 function One() {
+ 
   const router = useRouter();
   const configureRecaptcha = () => {
-    console.log(auth);
     window.recaptchaVerifier = new RecaptchaVerifier(
-      "sign-in-button",
-
+     'sign-in-button',
       {
+        'size':"invisible",
         callback: (response) => {
           // reCAPTCHA solved, allow signInWithPhoneNumber.
           onSignInSubmit();
         },
-      },
-      auth
+      },auth
     );
   };
-  const onSignInSubmit = () => {
+  const onSignInSubmit = (e) => {
+    e.preventDefault();
     configureRecaptcha();
     const phoneNumber = countryCode + userPhone;
     console.log(phoneNumber);
@@ -76,7 +76,7 @@ function One() {
         // user in with confirmationResult.confirm(code).
         window.confirmationResult = confirmationResult;
         console.log("send");
-        router.push("/otp");
+        evaluateProfilePost();
 
         // ...
       })
@@ -119,8 +119,8 @@ function One() {
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return regexp.test(String(email).toLowerCase());
   }
-  function evaluateProfilePost(e) {
-    e.preventDefault();
+  function evaluateProfilePost() {
+
     setLoading(true);
     setSuccess("");
     setError("");
@@ -176,7 +176,8 @@ function One() {
         } else {
           setSuccess("Profile Submitted");
           console.log(" ot success");
-          onSignInSubmit();
+          
+          router.push("/otp");
         }
       })
       .catch((err) => {
@@ -1329,7 +1330,7 @@ function One() {
                       <Link color="#0DB3FB">Terms and Conditions</Link>
                     </Checkbox>
 
-                    <div id="sign-in-button"></div>
+                   
                   </VStack>
                 </GridItem>
                 <GridItem rowSpan={12} colSpan={15}>
@@ -1379,15 +1380,16 @@ function One() {
                           bg: error
                             ? "red"
                             : success
-                            ? "green"
+                            ? "rgba(13, 179, 251, 0.7)"
                             : "rgba(13, 179, 251, 0.7)",
                         }}
-                        onClick={evaluateProfilePost}
+                        id="sign-in-button"
+                        onClick={onSignInSubmit}
                       >
                         {error
                           ? "Try Again"
                           : success
-                          ? "Profile Submitted"
+                          ? "Verify your OTP"
                           : "View Profile Evaluation Report"}
                       </Button>
                     </Tooltip>
