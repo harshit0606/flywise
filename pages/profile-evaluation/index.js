@@ -51,6 +51,7 @@ import {
 
 function One() {
   const router = useRouter();
+  
   const configureRecaptcha = () => {
     console.log(auth);
     window.recaptchaVerifier = new RecaptchaVerifier(
@@ -65,6 +66,8 @@ function One() {
       auth
     );
   };
+
+ 
   const onSignInSubmit = () => {
     configureRecaptcha();
     const phoneNumber = countryCode + userPhone;
@@ -76,7 +79,7 @@ function One() {
         // user in with confirmationResult.confirm(code).
         window.confirmationResult = confirmationResult;
         console.log("send");
-        router.push("/otp");
+        evaluateProfilePost();
 
         // ...
       })
@@ -110,7 +113,8 @@ function One() {
   const [budget, setBudget] = useState("Under 20 Lakhs");
   const [fundMasters, setFundMasters] = useState("Secured Loan");
   const [tnC, setTnC] = useState(false);
-
+  const [firstname,setfirstname]=useState("");
+  const [lastname,setlastname]=useState("");
   const [username, setUsername] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userPhone, setUserPhone] = useState("");
@@ -120,7 +124,7 @@ function One() {
     return regexp.test(String(email).toLowerCase());
   }
   function evaluateProfilePost(e) {
-    e.preventDefault();
+  
     setLoading(true);
     setSuccess("");
     setError("");
@@ -174,9 +178,9 @@ function One() {
         if (res.data.error === "ALl fields required") {
           setError("All fields are required please try again");
         } else {
-          setSuccess("Profile Submitted");
+          setSuccess("");
           console.log(" ot success");
-          onSignInSubmit();
+          router.push("/otp");
         }
       })
       .catch((err) => {
@@ -1249,7 +1253,7 @@ function One() {
                 </GridItem>{" "}
               </React.Fragment>
             )}
-            {pe === 7 && (
+            {pe === 7 &&  (
               <React.Fragment>
                 {" "}
                 <GridItem
@@ -1382,12 +1386,12 @@ function One() {
                             ? "green"
                             : "rgba(13, 179, 251, 0.7)",
                         }}
-                        onClick={evaluateProfilePost}
+                        onClick={onSignInSubmit}
                       >
                         {error
                           ? "Try Again"
                           : success
-                          ? "Profile Submitted"
+                          ? "Verify your Number"
                           : "View Profile Evaluation Report"}
                       </Button>
                     </Tooltip>

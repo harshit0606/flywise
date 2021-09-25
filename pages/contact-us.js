@@ -16,6 +16,9 @@ import React, { useState } from 'react'
 import Footer from '../component/common/footerr';
 import Navbar from '../component/common/navbar';
 import classes from "../styles/header.module.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 function ContactUS() {
@@ -44,10 +47,12 @@ function ContactUS() {
       })
       .then((result) => {
         console.log(result)
-        setName('')
-        setMessage('')
-        setPhone('')
-        setName('')
+        setName('');
+        setMessage('');
+        setPhone('');
+        setEmail('');
+        setName('');
+        toast.success("We've recieved you request, will get back to you shortly.")
       })
       .catch((err) => {
         console.log(err)
@@ -55,6 +60,7 @@ function ContactUS() {
   }
   return (
     <Box overflowX="hidden">
+    <ToastContainer/>
       <title>Flywise - Contact us</title>
       <Navbar outline="Contact US" />
       <Grid
