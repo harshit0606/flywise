@@ -110,6 +110,7 @@ function One() {
   const [budget, setBudget] = useState("Under 20 Lakhs");
   const [fundMasters, setFundMasters] = useState("Secured Loan");
   const [tnC, setTnC] = useState(false);
+  const [iscsit,setiscsit]=useState("No");
 
   const [username, setUsername] = useState("");
   const [userEmail, setUserEmail] = useState("");
@@ -142,6 +143,7 @@ function One() {
     formData.append("email", userEmail);
     formData.append("mobileNo", userPhone);
     formData.append("session", session);
+    formData.append("iscsit",iscsit);
 
     axios({
       url: "https://flywisebackend.herokuapp.com/api/user/add",
@@ -167,6 +169,7 @@ function One() {
         email: userEmail,
         mobileNo: userPhone,
         session: session,
+        iscsit:iscsit,
       },
     })
       .then((res) => {
@@ -519,7 +522,7 @@ function One() {
                     onChange={(e) => setGreQuant(e)}
                     focusBorderColor="#25BAFB"
                     bg="rgba(240, 240, 240, 1)"
-                    maxW="50%"
+                    maxW={{base:"70%",md:"50%"}}
                     min={130}
                     max={170}
                     placeholder="Enter score"
@@ -561,7 +564,7 @@ function One() {
                     max={170}
                     focusBorderColor="#25BAFB"
                     bg="rgba(240, 240, 240, 1)"
-                    maxW="50%"
+                    maxW={{base:"70%",md:"50%"}}
                     placeholder="Enter score"
                   >
                     <NumberInputField />
@@ -600,7 +603,7 @@ function One() {
                     
                     focusBorderColor="#25BAFB"
                     bg="rgba(240, 240, 240, 1)"
-                    maxW="50%"
+                    maxW={{base:"70%",md:"50%"}}
                     placeholder="Enter score"
                   >
                     <NumberInputField />
@@ -729,9 +732,10 @@ function One() {
                   px={["4rem", "3rem", "2rem", "3rem", "4rem"]}
                   rowSpan={7}
                   colSpan={[15, 15, 7, 7, 7]}
+
                   // bg={bg}
                 >
-                  <Text pb="4" fontSize="3xl" fontWeight="500">
+                  <Text pb="4" fontSize={{base:"2xl",md:"3xl"}} fontWeight="500">
                     Any work experience?
                     <Link _hover={{ textDecoration: "none" }} color="red">
                       *
@@ -768,6 +772,45 @@ function One() {
                       </Radio>
                     </Stack>
                   </RadioGroup>
+                  </GridItem>
+                <GridItem
+                  // id="griditem"
+                  py={8}
+                  px={["4rem", "3rem", "2rem", "3rem", "4rem"]}
+                  rowSpan={7}
+                  colSpan={[15, 15, 7, 7, 7]}
+                  // bg={bg}
+                >
+                  <Text pb="0" mt="4" fontSize={{base:"2xl",md:"3xl"}} fontWeight="500">
+                    Is your undergrad degree in CS/IT?
+                    <Link _hover={{ textDecoration: "none" }} color="red">
+                      
+                    </Link>
+                  </Text>
+
+                  {/* <Text
+								color="rgba(125, 125, 125, 1)"
+								py="4"
+							>{`Please write "Not taken yet" if you are yet to take GRE and "Not applicable" if you don't want to take GRE test`}</Text> */}
+                  <RadioGroup
+                    mt="2"
+                    onChange={setiscsit}
+                    value={iscsit}
+                    defaultValue="No"
+                  >
+                    <Stack spacing={2}>
+                      <Radio size="lg" value="No" colorScheme="blue">
+                        No 
+                      </Radio>
+                      <Radio
+                        size="lg"
+                        value="Yes"
+                        colorScheme="blue"
+                      >
+                        Yes
+                      </Radio>
+                    </Stack>
+                  </RadioGroup>
                   {/* <Input
 								value={workEx}
 								onChange={e => setWorkEx(e.target.value)}
@@ -786,7 +829,7 @@ function One() {
                   colSpan={[15, 15, 7, 7, 7]}
                   // bg={bg}
                 >
-                  <Text pb="4" fontSize="3xl" fontWeight="500">
+                  <Text pb="4" fontSize={{base:"2xl",md:"3xl"}} fontWeight="500">
                     Undergrad (B.tech) College/University
                     <Link
                       textDecoration="none"
@@ -809,7 +852,7 @@ function One() {
                     py="6"
                     focusBorderColor="#25BAFB"
                     bg="rgba(240, 240, 240, 1)"
-                    maxW="50%"
+                    maxW={{base:"70%",md:"50%"}}
                     placeholder="Enter Name"
                   />
                 </GridItem>
@@ -821,7 +864,7 @@ function One() {
                   colSpan={[15, 15, 7, 7, 7]}
                   // bg={bg}
                 >
-                  <Text pb="4" fontSize="3xl" fontWeight="500">
+                  <Text pb="4" fontSize={{base:"2xl",md:"3xl"}} fontWeight="500">
                     Number of backlogs
                     <Link _hover={{ textDecoration: "none" }} color="red">
                       *
@@ -837,7 +880,7 @@ function One() {
                     py="6"
                     focusBorderColor="#25BAFB"
                     bg="rgba(240, 240, 240, 1)"
-                    maxW="50%"
+                    maxW={{base:"70%",md:"50%"}}
                     placeholder="Enter"
                     type="number"
                   />
@@ -852,7 +895,7 @@ function One() {
                   colSpan={[15, 15, 7, 7, 7]}
                   // bg={bg}
                 >
-                  <Text pb="4" fontSize="3xl" fontWeight="500">
+                  <Text pb="4" fontSize={{base:"2xl",md:"3xl"}} fontWeight="500">
                     C.G.P.A
                     <Link fontSize="3xl" fontWeight="500" color="red">
                       *
@@ -868,7 +911,7 @@ function One() {
                     // py="6"
                     focusBorderColor="#25BAFB"
                     bg="rgba(240, 240, 240, 1)"
-                    maxW="50%"
+                    maxW={{base:"70%",md:"50%"}}
                     placeholder="Enter CGPA"
                   >
                     <NumberInputField />
