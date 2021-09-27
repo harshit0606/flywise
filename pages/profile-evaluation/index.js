@@ -522,7 +522,7 @@ function One() {
                     onChange={(e) => setGreQuant(e)}
                     focusBorderColor="#25BAFB"
                     bg="rgba(240, 240, 240, 1)"
-                    maxW="50%"
+                    maxW={{base:"70%",md:"50%"}}
                     min={130}
                     max={170}
                     placeholder="Enter score"
@@ -564,7 +564,7 @@ function One() {
                     max={170}
                     focusBorderColor="#25BAFB"
                     bg="rgba(240, 240, 240, 1)"
-                    maxW="50%"
+                    maxW={{base:"70%",md:"50%"}}
                     placeholder="Enter score"
                   >
                     <NumberInputField />
@@ -603,7 +603,7 @@ function One() {
                     
                     focusBorderColor="#25BAFB"
                     bg="rgba(240, 240, 240, 1)"
-                    maxW="50%"
+                    maxW={{base:"70%",md:"50%"}}
                     placeholder="Enter score"
                   >
                     <NumberInputField />
@@ -735,7 +735,7 @@ function One() {
 
                   // bg={bg}
                 >
-                  <Text pb="4" fontSize="3xl" fontWeight="500">
+                  <Text pb="4" fontSize={{base:"2xl",md:"3xl"}} fontWeight="500">
                     Any work experience?
                     <Link _hover={{ textDecoration: "none" }} color="red">
                       *
@@ -781,7 +781,7 @@ function One() {
                   colSpan={[15, 15, 7, 7, 7]}
                   // bg={bg}
                 >
-                  <Text pb="0" mt="4" fontSize="3xl" fontWeight="500">
+                  <Text pb="0" mt="4" fontSize={{base:"2xl",md:"3xl"}} fontWeight="500">
                     Is your undergrad degree in CS/IT?
                     <Link _hover={{ textDecoration: "none" }} color="red">
                       
@@ -829,7 +829,7 @@ function One() {
                   colSpan={[15, 15, 7, 7, 7]}
                   // bg={bg}
                 >
-                  <Text pb="4" fontSize="3xl" fontWeight="500">
+                  <Text pb="4" fontSize={{base:"2xl",md:"3xl"}} fontWeight="500">
                     Undergrad (B.tech) College/University
                     <Link
                       textDecoration="none"
@@ -852,7 +852,7 @@ function One() {
                     py="6"
                     focusBorderColor="#25BAFB"
                     bg="rgba(240, 240, 240, 1)"
-                    maxW="50%"
+                    maxW={{base:"70%",md:"50%"}}
                     placeholder="Enter Name"
                   />
                 </GridItem>
@@ -864,7 +864,7 @@ function One() {
                   colSpan={[15, 15, 7, 7, 7]}
                   // bg={bg}
                 >
-                  <Text pb="4" fontSize="3xl" fontWeight="500">
+                  <Text pb="4" fontSize={{base:"2xl",md:"3xl"}} fontWeight="500">
                     Number of backlogs
                     <Link _hover={{ textDecoration: "none" }} color="red">
                       *
@@ -880,7 +880,7 @@ function One() {
                     py="6"
                     focusBorderColor="#25BAFB"
                     bg="rgba(240, 240, 240, 1)"
-                    maxW="50%"
+                    maxW={{base:"70%",md:"50%"}}
                     placeholder="Enter"
                     type="number"
                   />
@@ -895,7 +895,7 @@ function One() {
                   colSpan={[15, 15, 7, 7, 7]}
                   // bg={bg}
                 >
-                  <Text pb="4" fontSize="3xl" fontWeight="500">
+                  <Text pb="4" fontSize={{base:"2xl",md:"3xl"}} fontWeight="500">
                     C.G.P.A
                     <Link fontSize="3xl" fontWeight="500" color="red">
                       *
@@ -911,7 +911,7 @@ function One() {
                     // py="6"
                     focusBorderColor="#25BAFB"
                     bg="rgba(240, 240, 240, 1)"
-                    maxW="50%"
+                    maxW={{base:"70%",md:"50%"}}
                     placeholder="Enter CGPA"
                   >
                     <NumberInputField />
