@@ -597,8 +597,7 @@ function One() {
                   <NumberInput
                     value={ieltsToefl}
                     onChange={(e) => setIeltsToefl(e)}
-                    max={9}
-                    min={5}
+                    
                     focusBorderColor="#25BAFB"
                     bg="rgba(240, 240, 240, 1)"
                     maxW="50%"
@@ -1128,7 +1127,7 @@ function One() {
                     fontSize="3xl"
                     fontWeight="500"
                   >
-                    Which session are you applying for?
+                    Which intake are you applying for?
                     <Link fontSize="3xl" fontWeight="500" color="red">
                       *
                     </Link>
