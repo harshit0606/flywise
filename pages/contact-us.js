@@ -35,9 +35,13 @@ function ContactUS() {
     }
     fetch('https://flywisebackend.herokuapp.com/api/contact', {
       method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify({
         name: name,
-        emai: email,
+        email: email,
         phone: phone,
         message: message,
       }),
