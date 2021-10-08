@@ -284,7 +284,7 @@ function ContactUS() {
                   </Radio>
                   <Radio
                     size="md"
-                    value="Blog or Publication"
+                    value="College Campaigns"
                     colorScheme="blue"
                   >
                    College Campaigns
