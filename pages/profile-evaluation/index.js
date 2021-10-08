@@ -790,7 +790,7 @@ function One() {
                   </Radio>
                   <Radio
                     size="lg"
-                    value="Blog or Publication"
+                    value="College Campaigns"
                     colorScheme="blue"
                   >
                    College Campaigns
