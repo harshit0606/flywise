@@ -109,10 +109,15 @@ function One() {
   const [clgUni, setClgUni] = useState("");
   const [budget, setBudget] = useState("Under 20 Lakhs");
   const [fundMasters, setFundMasters] = useState("Secured Loan");
+  const [referral,setReferral]=useState('')
   const [tnC, setTnC] = useState(false);
   const [iscsit,setiscsit]=useState("No");
 
-  const [username, setUsername] = useState("");
+  const [discover,setDiscover]=useState('Search Engine(Google,Yahoo,etc.)');
+  const [other,setOther]=useState('');
+
+  const [firstName, setFirstName] = useState("");
+  const [lastName,setLastName]=useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userPhone, setUserPhone] = useState("");
   function isEmail(email) {
@@ -121,7 +126,9 @@ function One() {
     return regexp.test(String(email).toLowerCase());
   }
   function evaluateProfilePost() {
-
+    if(discover=='Other'){
+      setDiscover(other);
+    }
     setLoading(true);
     setSuccess("");
     setError("");
@@ -139,11 +146,14 @@ function One() {
     formData.append("college", clgUni);
     formData.append("budget", budget);
     formData.append("fund", fundMasters);
-    formData.append("name", username);
+    formData.append("firstName", firstName);
+    formData.append("lastName", lastName);
     formData.append("email", userEmail);
     formData.append("mobileNo", userPhone);
     formData.append("session", session);
     formData.append("iscsit",iscsit);
+    formData.append("referral",referral);
+    formData.append("discover",discover);
 
     axios({
       url: "https://flywisebackend.herokuapp.com/api/user/add",
@@ -165,11 +175,14 @@ function One() {
         college: clgUni,
         budget: budget,
         fund: fundMasters,
-        name: username,
+        firstName:firstName,
+        lastName:lastName,
         email: userEmail,
         mobileNo: userPhone,
         session: session,
         iscsit:iscsit,
+        referral:referral,
+        discover:discover,
       },
     })
       .then((res) => {
@@ -726,6 +739,111 @@ function One() {
                     Please answer the questions below
                   </Heading>
                 </GridItem>
+
+                <GridItem
+                  // id="griditem"
+                  py={8}
+                  px={["4rem", "3rem", "2rem", "3rem", "4rem"]}
+                  rowSpan={7}
+                  colSpan={[15, 15, 7, 7, 7]}
+
+                  // bg={bg}
+                >
+                <Text pb="4" fontSize={{base:"2xl",md:"3xl"}} fontWeight="500">
+                How did you discover Flywise?
+              </Text>
+              
+              <RadioGroup
+                mt="2"
+                onChange={setDiscover}
+                value={discover}
+                defaultValue="Search Engine(Google,Yahoo,etc.)"
+              >
+                <Stack spacing={2}>
+                  <Radio
+                    size="lg"
+                    value="Search Engine(Google,Yahoo,etc.)"
+                    colorScheme="blue"
+                  >
+                  Search Engine (Google,Yahoo,etc.)
+                  </Radio>
+                  <Radio
+                    size="lg"
+                    value="Recommended by friend or colleague"
+                    colorScheme="blue"
+                  >
+                  Recommended by friend or colleague
+                  </Radio>
+                  <Radio
+                    size="lg"
+                    value="Social Media"
+                    colorScheme="blue"
+                  >
+                   Social Media
+                  </Radio>
+                  <Radio
+                    size="lg"
+                    value="Blog or Publication"
+                    colorScheme="blue"
+                  >
+                   Blog or Publication
+                  </Radio>
+                  <Radio
+                    size="lg"
+                    value="Blog or Publication"
+                    colorScheme="blue"
+                  >
+                   College Campaigns
+                  </Radio>
+                  <div style={{display:"flex"}}>
+                  <Radio
+                    size="lg"
+                    value="Other"
+                    colorScheme="blue"
+                  >
+                   Other :
+                  </Radio>
+                  <Input
+                   width="200px"
+                   height="30px"
+                   border="none"
+                  outline="none"
+                  focusBorderColor="none"
+                  required="false"
+                   borderBottom="1px solid lightgray"            
+                   value={other}
+                   onChange={(e) => {setOther(e.target.value);setDiscover("Other");}}
+                 />
+                  </div>
+                </Stack>
+              </RadioGroup>
+             
+                  
+                  </GridItem>
+                <GridItem
+                  // id="griditem"
+                  py={8}
+                  px={["4rem", "3rem", "2rem", "3rem", "4rem"]}
+                  rowSpan={7}
+                  colSpan={[15, 15, 7, 7, 7]}
+
+                  // bg={bg}
+                >
+                  <Text pb="4" fontSize={{base:"2xl",md:"3xl"}} fontWeight="500">
+                    Do you have any Referral Code?
+                  </Text>
+                  <Input
+                  focusBorderColor="#25BAFB"
+                    bg="rgba(240, 240, 240, 1)"
+                    maxW={{base:"70%",md:"50%"}}
+                  placeholder="Enter Code"
+                  
+                  value={referral}
+                  onChange={(e) => setReferral(e.target.value)}
+                />
+                  
+                  </GridItem>
+
                 <GridItem
                   // id="griditem"
                   py={8}
@@ -1304,14 +1422,26 @@ function One() {
                   <VStack pt="4" spacing={8}>
                     <Input
                       // ml={{ base: '4', md: '4' }}
-                      value={username}
+                      value={firstName}
                       // type="text"
-                      onChange={(e) => setUsername(e.target.value)}
+                      onChange={(e) => setFirstName(e.target.value)}
                       py="3"
                       focusBorderColor="#25BAFB"
                       bg="rgba(240, 240, 240, 1)"
                       width="320px"
-                      placeholder="Name"
+                      placeholder="First Name"
+                      type="text"
+                    />
+                    <Input
+                      // ml={{ base: '4', md: '4' }}
+                      value={lastName}
+                      // type="text"
+                      onChange={(e) => setLastName(e.target.value)}
+                      py="3"
+                      focusBorderColor="#25BAFB"
+                      bg="rgba(240, 240, 240, 1)"
+                      width="320px"
+                      placeholder="Last Name"
                       type="text"
                     />
                     <Input
@@ -1394,7 +1524,8 @@ function One() {
                           !tnC ||
                           !isEmail(userEmail) ||
                           !userPhone ||
-                          !username ||
+                          !firstName ||
+                          !lastName ||
                           success
                         }
                         mt="0"
