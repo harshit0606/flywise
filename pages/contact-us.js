@@ -42,7 +42,7 @@ function ContactUS() {
       alert('All fields required')
       return
     }
-    fetch('http://localhost:8000/api/contact', {
+    fetch('https://flywisebackend.herokuapp.com/api/contact', {
       method: 'POST',
       headers: {
         Accept: 'application/json',

@@ -153,8 +153,7 @@ function One() {
     formData.append('discover', discover == 'Other' ? other : discover)
 
     axios({
-      // url: 'https://flywisebackend.herokuapp.com/api/user/add',
-      url: 'http://localhost:8000/api/user/add',
+      url: 'https://flywisebackend.herokuapp.com/api/user/add',
       method: 'POST',
       headers: {
         contentType: 'applications/json',
